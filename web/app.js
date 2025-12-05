@@ -36,7 +36,7 @@ const embeddedWorkshopCsv = `#,Session,When (relative),Duration,Pre-work lead,Re
 6,"Performance & QA / Validation",Week 5,"60–90 min","3 days","QA Lead; BI Dev; Data Owner","ETL working; prototype available",High,"QA plan and checklist; validation scripts and test cases; performance benchmark report; UAT acceptance criteria; communication/COMM_06_QA_VALIDATION.md"
 7,Deployment & Monitoring,Week 6,"60 min","3–5 days","DevOps/Ops; BI Lead; Security","QA pass",Medium,"Final runbook and deployment checklist; monitoring and alerting rules; access matrix; security/compliance sign-off; communication/COMM_07_DEPLOYMENT_MONITORING.md"
 8,User Training & Handoff,Week 7,"60–90 min","3 days","Training lead; Product Owner; end-users","Deployed dashboard",Medium,"Training slides and recordings; user guide/quick-start; completed follow_up/FUP_TEMPLATE.md; sign-off document; communication/COMM_08_TRAINING_HANDOFF.md"
-9,Retrospective & Benefits Review,Week 8,"45–60 min","2–3 days","BI Lead; Data Owner; Ops; Product Owner","Post-go-live data",Low,"Retrospective notes; lessons-learned document; prioritized backlog; initial benefits report (docs/BENEFITS_REALIZATION.md update); communication/COMM_09_RETRO_BENEFITS.md``;
+9,Retrospective & Benefits Review,Week 8,"45–60 min","2–3 days","BI Lead; Data Owner; Ops; Product Owner","Post-go-live data",Low,"Retrospective notes; lessons-learned document; prioritized backlog; initial benefits report (docs/BENEFITS_REALIZATION.md update); communication/COMM_09_RETRO_BENEFITS.md"`;
 
 function renderTable(filter) {
   tableBody.innerHTML = "";
