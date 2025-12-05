@@ -205,13 +205,15 @@ async function loadWorkshopCsv() {
     // Try to load the CSV via HTTP first (works on GitHub Pages or any server)
     try {
       const res = await fetch("templates/WORKSHOP_DETAILED_SESSION_PLAN.csv");
-      if (!res.ok) {
-        throw new Error(`HTTP ${res.status}`);
+      if (res.ok) {
+        text = await res.text();
+      } else {
+        console.warn("CSV HTTP error, using embedded fallback:", res.status);
+        text = embeddedWorkshopCsv;
       }
-      text = await res.text();
     } catch (fetchErr) {
-      // If fetch fails (e.g., file:// or offline demo), fall back to embedded CSV
-      console.warn("Falling back to embedded workshop CSV", fetchErr);
+      // Network / CORS errors → fallback
+      console.warn("Fetch failed, using embedded workshop CSV", fetchErr);
       text = embeddedWorkshopCsv;
     }
 
