@@ -25,6 +25,19 @@ const tableBody = document.querySelector("#workshopTable tbody");
 const filterSelect = document.getElementById("filterPriority");
 const ganttContainer = document.getElementById("ganttContainer");
 
+// Fallback embedded CSV matching templates/WORKSHOP_DETAILED_SESSION_PLAN.csv
+const embeddedWorkshopCsv = `#,Session,When (relative),Duration,Pre-work lead,Required participants,Dependency,Priority,Deliverables
+1,Kickoff,"Week 0, Day 0","60–90 min","3 days","Sponsor; PM; Product Owner; Tech leads",None,"CRITICAL (High)","Updated docs/PROJECT_BRIEF.md; meeting minutes (templates/MEETING_MINUTES.md); action items in templates/ACTION_LOG.csv; initial templates/RACI.md entries; communication/COMM_01_KICKOFF.md"
+2,Technical Data Discovery (deep),"Week 1, Days 1–5","90–120 min (may repeat per source)","5–7 days","Data Owners; ETL; BI Dev; PM","Kickoff","CRITICAL (High)","Completed deliverables/DATA_INVENTORY.md; sample extracts (CSV/SQL); data dictionaries; data access log; initial data quality notes; communication/COMM_02_DATA_DISCOVERY.md"
+2a,"Security, Privacy & Compliance","Week 0–1 (parallel/early)","60 min","3–5 days","Security/Compliance; Data Owner; PM; BI Lead","Kickoff (or before Data Discovery)","CRITICAL (High if PII)","Data classification register; masking rules; compliance sign-offs; updated docs/DATA_GOVERNANCE.md; communication/COMM_02A_SECURITY_PRIVACY.md"
+3,Data Modeling / Semantic Layer,Week 2,"90–120 min","3–5 days","BI Lead; Data Modeler; ETL; Data Owner","Data Discovery","CRITICAL (High)","Model diagram (PNG/MD); canonical table definitions (documented in deliverables/ARCHITECTURE.md or separate model file); updated deliverables/KPI_SPEC.md mappings; communication/COMM_03_MODELING.md"
+4,ETL / Pipeline Design,Week 3,"90 min","3–5 days","ETL engineers; Data Owner; BI Dev; Ops","Modeling","CRITICAL (High)","ETL design document; pipeline diagrams; schedule definitions; runbook draft (scripts/README.md) and monitoring checks; communication/COMM_04_ETL_DESIGN.md"
+5,"Dashboard Design (UX + BI)","Week 3–4","90 min","3 days","Product Owner; Designer; BI Dev; PM","Modeling; some ETL mock data",High,"Wireframes and mockups; finalized deliverables/KPI_SPEC.md; deliverables/VIS_SPEC.md; mock datasets for prototyping; communication/COMM_05_DASHBOARD_DESIGN.md"
+6,"Performance & QA / Validation",Week 5,"60–90 min","3 days","QA Lead; BI Dev; Data Owner; PM","ETL working; prototype available",High,"QA plan and checklist; validation scripts and test cases; performance benchmark report; UAT acceptance criteria; communication/COMM_06_QA_VALIDATION.md"
+7,Deployment & Monitoring,Week 6,"60 min","3–5 days","DevOps/Ops; BI Lead; PM; Security","QA pass",Medium,"Final runbook and deployment checklist; monitoring and alerting rules; access matrix; security/compliance sign-off; communication/COMM_07_DEPLOYMENT_MONITORING.md"
+8,User Training & Handoff,Week 7,"60–90 min","3 days","Training lead; PM; Product Owner; end-users","Deployed dashboard",Medium,"Training slides and recordings; user guide/quick-start; completed follow_up/FUP_TEMPLATE.md; sign-off document; communication/COMM_08_TRAINING_HANDOFF.md"
+9,Retrospective & Benefits Review,Week 8,"45–60 min","2–3 days","PM; BI Lead; Data Owner; Ops; Product Owner","Post-go-live data",Low,"Retrospective notes; lessons-learned document; prioritized backlog; initial benefits report (docs/BENEFITS_REALIZATION.md update); communication/COMM_09_RETRO_BENEFITS.md"`;
+
 function renderTable(filter) {
   tableBody.innerHTML = "";
   workshopData
@@ -187,11 +200,21 @@ filterSelect.addEventListener("change", () => {
 
 async function loadWorkshopCsv() {
   try {
-    const res = await fetch("/templates/WORKSHOP_DETAILED_SESSION_PLAN.csv");
-    if (!res.ok) {
-      throw new Error(`HTTP ${res.status}`);
+    let text;
+
+    // Try to load the CSV via HTTP first (works on GitHub Pages or any server)
+    try {
+      const res = await fetch("/templates/WORKSHOP_DETAILED_SESSION_PLAN.csv");
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}`);
+      }
+      text = await res.text();
+    } catch (fetchErr) {
+      // If fetch fails (e.g., file:// or offline demo), fall back to embedded CSV
+      console.warn("Falling back to embedded workshop CSV", fetchErr);
+      text = embeddedWorkshopCsv;
     }
-    const text = await res.text();
+
     const rows = text
       .trim()
       .split(/\r?\n/)
