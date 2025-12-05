@@ -14,7 +14,12 @@
         <span class="brand-disclaimer">Reusable playbook template – adapt branding, roles, and content to your own organization.</span>
       </div>
     </div>
-    <nav class="top-nav">
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="top-nav" aria-label="Primary">
       <button class="nav-link active" data-section="overview">Overview</button>
       <button class="nav-link" data-section="timeline">Timeline & Workshops</button>
       <button class="nav-link" data-section="governance">PMI & Governance</button>
@@ -401,6 +406,14 @@
       <div id="docContent" class="doc-content"></div>
     </aside>
   </main>
+
+  <!-- Optional mobile bottom tab navigation for quick section access -->
+  <nav class="mobile-tab-bar" aria-label="Quick section navigation">
+    <button class="mobile-tab" data-section="overview">Overview</button>
+    <button class="mobile-tab" data-section="timeline">Timeline</button>
+    <button class="mobile-tab" data-section="governance">Governance</button>
+    <button class="mobile-tab" data-section="agile">Agile</button>
+  </nav>
 
   <footer class="app-footer">
     <span>Dashboard Project Playbook</span>

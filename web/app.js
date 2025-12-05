@@ -1,23 +1,54 @@
 const sections = document.querySelectorAll(".content-section");
 const navButtons = document.querySelectorAll(".nav-link");
+const mobileTabs = document.querySelectorAll(".mobile-tab");
+const navToggle = document.querySelector(".nav-toggle");
+const topNav = document.querySelector(".top-nav");
+
+function activateSection(target) {
+  if (!target) return;
+
+  navButtons.forEach((b) => {
+    b.classList.toggle("active", b.dataset.section === target);
+  });
+
+  mobileTabs.forEach((t) => {
+    t.classList.toggle("active", t.dataset.section === target);
+  });
+
+  sections.forEach((sec) => {
+    sec.classList.toggle("active", sec.id === target);
+  });
+
+  // Clear document viewer when switching main sections
+  if (typeof clearDocumentViewer === "function") {
+    clearDocumentViewer();
+  }
+
+  // On small screens, collapse the nav after selection
+  if (window.innerWidth <= 900 && topNav && navToggle) {
+    topNav.classList.remove("open");
+  }
+}
 
 navButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     const target = btn.dataset.section;
-
-    navButtons.forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-
-    sections.forEach((sec) => {
-      sec.classList.toggle("active", sec.id === target);
-    });
-
-    // Clear document viewer when switching main sections
-    if (typeof clearDocumentViewer === "function") {
-      clearDocumentViewer();
-    }
+    activateSection(target);
   });
 });
+
+mobileTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.dataset.section;
+    activateSection(target);
+  });
+});
+
+if (navToggle && topNav) {
+  navToggle.addEventListener("click", () => {
+    topNav.classList.toggle("open");
+  });
+}
 
 let workshopData = [];
 
