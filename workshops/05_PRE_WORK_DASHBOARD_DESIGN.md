@@ -1,23 +1,24 @@
-Dashboard Design (UX + BI) — Pre-work Checklist
+Model Training & Experimentation — Pre-work Checklist
 
 Send 3 working days before the session.
 
 Required inputs
-- Product owner: top 5 business questions the dashboard must answer.
-- Designers: initial wireframes or sketches.
-- BI devs: mock dataset (aggregated) for prototyping and sample charts.
+- Product owner: top 5 business questions the predictive model should help answer.
+- Data scientists: initial hypotheses, baseline models or notebooks (if any).
+- Data/ML engineers: mock or sampled training dataset (with target variable) for experimentation.
 
 Required attendees
-- Product owner, BI developers, designer.
+- Product owner, Data Scientists, Data/ML Engineers.
 
 Attachments to include in invite
-- `deliverables/KPI_SPEC.md` (draft)
-- Wireframes or moodboards
+- `deliverables/MODEL_SPEC (C).md` (draft)
+- `deliverables/DATA_INVENTORY (C).md`
 
 Goals for the session
-- Map KPIs to charts and views, define filters and drill paths.
-- Agree on visual standards and accessibility requirements.
+- Refine the problem framing, target variable(s), and prediction horizon.
+- Agree on candidate algorithms, feature sets, and key evaluation metrics.
+- Align on experiment plan (baselines, ablations, and comparison criteria).
 
 Post-meeting outputs
-- Wireframe sign-off or updated mockups.
-- Dashboard view list with assigned owners for development.
+- Updated `deliverables/MODEL_SPEC (C).md` with agreed modeling approach.
+- Prioritized list of experiments and baselines with owners and timelines.

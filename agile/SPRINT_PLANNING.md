@@ -24,8 +24,9 @@ Agenda
 
 Outputs
 - Committed sprint backlog (update `agile/SPRINT_BACKLOG_TEMPLATE.csv`).
-- Sprint goal and acceptance criteria recorded. 
+- Sprint goal and acceptance criteria recorded.
 - Risks and owners noted in `templates/ACTION_LOG.csv` or meeting minutes.
+- Optional: Capture simple flow metrics (stories completed, average cycle time, WIP) and review trends in retrospectives.
 
 Notes
 - Timebox discussions; defer deep design conversations to follow-up sessions with relevant stakeholders.

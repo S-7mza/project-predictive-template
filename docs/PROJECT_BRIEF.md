@@ -7,26 +7,27 @@ Start date: [DATE]
 Target delivery: [DATE]
 
 Background & context
-- Why this dashboard is needed, business goals and constraints.
+- Why this predictive model is needed, business goals, forecasting needs and constraints.
 
 Objectives & success criteria
 - Primary objective
-- KPIs impacted
-- Acceptance criteria (metrics, timeliness, data quality)
+- Target variables and prediction accuracy goals
+- Acceptance criteria (model performance metrics, prediction accuracy, inference latency, data quality)
 
 Scope
-- In-scope
-- Out-of-scope
+- In-scope: prediction targets, feature sources, model types, deployment methods
+- Out-of-scope: features or predictions not included in this release
 
 Stakeholders
-- Primary users
-- Data owners
-- Technical contacts
+- Primary users of predictions
+- Data owners and feature providers
+- Technical contacts (Data Scientists, ML Engineers, MLOps)
 
 Key constraints & assumptions
-- Data availability
-- Security/privacy constraints
+- Historical data availability and quality
+- Security/privacy constraints for sensitive features
+- Model explainability and compliance requirements
 
 Next steps
-- Workshops to run: Kickoff, Data Discovery, Design, Review
+- Workshops to run: Kickoff, Data & Feature Discovery, Feature Engineering, Model Training, Validation, Deployment
 - Primary owner: [NAME]

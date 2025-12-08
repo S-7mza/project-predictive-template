@@ -48,7 +48,7 @@ Decision: Go / No-Go / Conditional Go
 Open remediation:
 - Action ID / Short description / Owner / Due date
 
-Milestone Gate: After ETL Implementation (Gate → Proceed to Dashboard prototype / QA)
+Milestone Gate: After ETL / feature pipeline implementation (Gate → Proceed to baseline model development / QA)
 - [ ] ETL jobs scheduled and running in staging with reproducible outputs
 - [ ] Key reconciliation tests passed (source vs canonical totals within thresholds)
 - [ ] ETL monitoring and alerting configured and validated
@@ -58,11 +58,11 @@ Decision: Go / No-Go / Conditional Go
 Open remediation:
 - Action ID / Short description / Owner / Due date
 
-Milestone Gate: After Dashboard Prototype (Gate → Proceed to UAT)
-- [ ] Wireframes / mockups signed-off by Product Owner
-- [ ] Prototype connected to staging data and demonstrates core interactions
-- [ ] Initial performance benchmarks for critical views meet targets
-- [ ] Visual accessibility checks and standards applied (`deliverables/VIS_SPEC (C).md`)
+Milestone Gate: After candidate model selection (Gate → Proceed to model validation / UAT)
+- [ ] Candidate model(s) and feature set documented (`deliverables/MODEL_SPEC (C).md`)
+- [ ] Offline performance against key KPIs meets agreed thresholds
+- [ ] Key business scenarios reviewed with stakeholders (e.g., win/loss examples, edge cases)
+- [ ] Model risk, bias, and explainability considerations logged with actions where needed
 Sign-off: Name: __________________  Date: ________
 Decision: Go / No-Go / Conditional Go
 Open remediation:

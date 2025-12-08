@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Dashboard Project Playbook</title>
+  <title>Predictive Analysis Project Playbook</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -10,8 +10,8 @@
   <header class="app-header">
     <div class="brand">
       <div class="brand-text">
-        <span class="brand-app">Dashboard Project Playbook</span>
-        <span class="brand-disclaimer">Reusable playbook template – adapt branding, roles, and content to your own organization.</span>
+        <span class="brand-app">Predictive Analysis Project Playbook</span>
+        <span class="brand-disclaimer">Reusable ML playbook template – adapt branding, roles, and content to your own organization.</span>
       </div>
     </div>
     <button class="nav-toggle" type="button" aria-label="Toggle navigation">
@@ -35,8 +35,8 @@
         <h2>Audience</h2>
         <ul>
           <li><strong>Managers:</strong> see status, decisions, and gates.</li>
-          <li><strong>Business owners:</strong> understand workshops and benefits.</li>
-          <li><strong>Engineers:</strong> jump into data, ETL, and QA.</li>
+          <li><strong>Business owners:</strong> understand workshops, model objectives, and prediction benefits.</li>
+          <li><strong>Data Scientists & ML Engineers:</strong> jump into features, models, training, and validation.</li>
         </ul>
       </section>
       <section class="sidebar-card">
@@ -74,31 +74,36 @@
 
     <section class="content">
       <section id="overview" class="content-section active">
-        <h1>Dashboard Project Playbook</h1>
+        <h1>Predictive Analysis Project Playbook</h1>
         <p class="lead">
           This interface is your single source of truth to initiate, plan, build,
-          validate, deploy, and grow a dashboard project. Follow each section in
-          order to manage the project end-to-end in any organization.
+          validate, deploy, and monitor a predictive analysis project. Follow each section in
+          order to manage ML model development end-to-end in any organization.
+        </p>
+
+        <p class="hint">
+          New here? Start with the onboarding guide in the docs folder:
+          <code>docs/PLAYBOOK_ONBOARDING_GUIDE.md</code>.
         </p>
 
         <div class="grid grid-2">
           <article class="card emphasis">
             <h2>Project at a glance</h2>
             <ul>
-              <li>Clear 8-week roadmap from idea to go-live.</li>
-              <li>Workshops with defined inputs, outputs, and owners.</li>
-              <li>PMI-aligned gates and decision points.</li>
-              <li>Agile execution with sprints, DoD, and ceremonies.</li>
+              <li>Clear roadmap from initiation to monitored, value-tracking model in production.</li>
+              <li>ML-focused workshops aligned to each phase of the model lifecycle.</li>
+              <li>PMI-aligned gates for data readiness, model readiness, and operational readiness.</li>
+              <li>Agile execution with sprints, experiments, and continuous improvement.</li>
             </ul>
           </article>
 
           <article class="card">
             <h2>Why this approach works</h2>
             <ul>
-              <li>Brings together PMI structure and Agile delivery practices.</li>
-              <li>Connects each workshop to concrete deliverables and templates.</li>
-              <li>Maintains traceability from business goals to KPIs and tests.</li>
-              <li>Offers ready-to-use communication and gating checklists.</li>
+              <li>Brings together PMI structure and Agile ML delivery practices.</li>
+              <li>Connects each workshop to concrete ML deliverables and templates.</li>
+              <li>Maintains traceability from business goals to model performance and predictions.</li>
+              <li>Offers ready-to-use ML communication, validation, and gating checklists.</li>
             </ul>
           </article>
         </div>
@@ -106,15 +111,15 @@
         <div class="grid grid-3">
           <article class="card small">
             <h3>For Managers</h3>
-            <p>See gates, decisions, and benefits without reading every file.</p>
+            <p>See gates, model performance, and prediction value without reading every file.</p>
           </article>
           <article class="card small">
             <h3>For Business</h3>
-            <p>Understand workshops, data needs, and expected outcomes.</p>
+            <p>Understand workshops, prediction objectives, and expected model outcomes.</p>
           </article>
           <article class="card small">
-            <h3>For Engineers</h3>
-            <p>Jump straight to data inventory, modeling, ETL, and QA specs.</p>
+            <h3>For Data Scientists</h3>
+            <p>Jump straight to features, model specs, training pipelines, and validation.</p>
           </article>
         </div>
       </section>
@@ -126,7 +131,9 @@
         <div class="card">
           <h2>Workshops Gantt view</h2>
           <p class="hint">High-level view based on the same workshop planner.</p>
-          <div id="ganttContainer" class="gantt-container"></div>
+          <div class="gantt-wrapper">
+            <div id="ganttContainer" class="gantt-container"></div>
+          </div>
         </div>
 
         <div class="card">
@@ -176,28 +183,29 @@
           <article class="card">
             <h2>Core PMI artifacts</h2>
             <ul>
-              <li>Project Charter (what, why, who, constraints).</li>
+              <li>Project Charter (what, why, who, model objectives, constraints).</li>
               <li>Project Plan (scope, schedule, cost, quality, risk, comms).</li>
-              <li>Data Governance (classification, masking, access, retention).</li>
-              <li>UAT & Quality plans tied to KPIs.</li>
+              <li>Data Governance (classification, features, access, retention, fairness).</li>
+              <li>Model Validation & Quality plans tied to performance metrics.</li>
             </ul>
             <a href="#" class="link" data-doc="docs/PROJECT_CHARTER (C).md">Open Charter</a>
             <a href="#" class="link" data-doc="docs/PROJECT_PLAN (C).md">Open Project Plan</a>
             <a href="#" class="link" data-doc="docs/DATA_GOVERNANCE (C).md">Open Data Governance</a>
-            <a href="#" class="link" data-doc="docs/TEST_UAT_PLAN (C).md">Open Test & UAT Plan</a>
+            <a href="#" class="link" data-doc="docs/MODEL_VALIDATION_PLAN (C).md">Open Model Validation Plan</a>
           </article>
 
           <article class="card emphasis">
             <h2>Gates & decisions</h2>
             <p>
-              Before moving between major phases (Discovery → Modeling → ETL →
-              Prototype → UAT → Deployment), run a gate review using the gating
-              checklist.
+              Before moving between lifecycle phases (Initiation  Data & Feature Discovery  Feature & Model Design 
+              ETL/Feature Pipelines  Model Training  Validation  Deployment & Monitoring),
+              run a gate review using the gating checklist.
             </p>
             <ul>
-              <li>Ensure required artifacts exist and are up-to-date.</li>
-              <li>Capture Go / No-Go / Conditional decisions.</li>
-              <li>Log actions in the Action Log with owners and due dates.</li>
+              <li>Confirm data/feature readiness for the next phase.</li>
+              <li>Validate model performance and risks against agreed criteria.</li>
+              <li>Check operational readiness (environments, monitoring, rollback) before deployment.</li>
+              <li>Capture Go / No-Go / Conditional decisions and log follow-up actions.</li>
             </ul>
             <a href="#" class="link" data-doc="02_GATING_CHECKLIST (C).md">Open Gating Checklist</a>
             <a href="#" class="link" data-doc="01_PMI_BEST_PRACTICES (C).md">Open PMI Best Practices</a>
@@ -233,9 +241,9 @@
           <article class="card">
             <h2>User stories & backlog</h2>
             <ul>
-              <li>Write stories focusing on user value and KPIs.</li>
-              <li>Link each story to KPIs and visuals.</li>
-              <li>Use acceptance criteria to ensure testability.</li>
+              <li>Write stories focusing on prediction value and model capabilities.</li>
+              <li>Link each story to target variables and business outcomes.</li>
+              <li>Use acceptance criteria for model performance and validation.</li>
             </ul>
             <div class="chip-row">
               <a href="#" class="chip" data-doc="agile/USER_STORY_TEMPLATE.md">User Story Template</a>
@@ -310,17 +318,17 @@
             <ul>
               <li><a href="#" data-doc="deliverables/DATA_INVENTORY (C).md">Data Inventory (C)</a></li>
               <li><a href="#" data-doc="docs/DATA_GOVERNANCE (C).md">Data Governance (C)</a></li>
-              <li><a href="#" data-doc="deliverables/KPI_SPEC (C).md">KPI Spec (C)</a></li>
-              <li><a href="#" data-doc="deliverables/VIS_SPEC (C).md">Visualization Spec (C)</a></li>
+              <li><a href="#" data-doc="deliverables/MODEL_SPEC (C).md">Model Spec (C)</a></li>
+              <li><a href="#" data-doc="deliverables/PREDICTION_OUTPUT_SPEC (C).md">Prediction Output Spec (C)</a></li>
               <li><a href="#" data-doc="deliverables/ARCHITECTURE.md">Architecture</a></li>
             </ul>
           </article>
 
           <article class="card">
-            <h2>Build, Test & Deploy</h2>
+            <h2>Build, Validate & Deploy</h2>
             <ul>
               <li><a href="#" data-doc="docs/QUALITY_MANAGEMENT_PLAN.md">Quality Management Plan</a></li>
-              <li><a href="#" data-doc="docs/TEST_UAT_PLAN (C).md">Test & UAT Plan (C)</a></li>
+              <li><a href="#" data-doc="docs/MODEL_VALIDATION_PLAN (C).md">Model Validation Plan (C)</a></li>
               <li><a href="#" data-doc="docs/ENVIRONMENT_INVENTORY.md">Environment Inventory</a></li>
               <li><a href="#" data-doc="docs/DEPLOYMENT_RUNBOOK.md">Deployment Runbook</a></li>
               <li><a href="#" data-doc="agile/DEPLOYMENT_CHECKLIST.md">Deployment Checklist</a></li>
@@ -362,7 +370,7 @@
 
       <section id="audit" class="content-section">
         <h1>Process Audits</h1>
-        <p class="lead">Consolidated audit view of your dashboard project process against multiple references.</p>
+        <p class="lead">Consolidated audit view of your predictive analysis project process against multiple references.</p>
 
         <article class="card emphasis">
           <h2>Summary by reference</h2>
@@ -416,8 +424,8 @@
   </nav>
 
   <footer class="app-footer">
-    <span>Dashboard Project Playbook</span>
-    <span>Use this interface as the reference for all phases of the project.</span>
+    <span>Predictive Analysis Project Playbook</span>
+    <span>Use this interface as the reference for all phases of the ML project.</span>
   </footer>
 
   <script src="app.js"></script>

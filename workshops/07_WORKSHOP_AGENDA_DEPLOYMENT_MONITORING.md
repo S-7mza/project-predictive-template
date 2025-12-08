@@ -9,4 +9,4 @@ Attendees: DevOps/Ops, BI Lead, Security
 4. Rollback and incident response plan (15 min)
 
 Outputs
-- Finalized runbook, monitoring dashboards, alert thresholds and access matrix.
+- Finalized runbook, monitoring configuration (including model and data drift alerts), alert thresholds and access matrix.

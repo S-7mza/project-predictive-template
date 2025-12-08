@@ -105,8 +105,8 @@ Best,
 
 ---
 
-5) Dashboard Design — Invite
-Subject: Dashboard Design — [PROJECT_NAME] — [DATE]
+5) Model Consumption UX / Dashboard Design — Invite
+Subject: Model Consumption UX / Dashboard Design — [PROJECT_NAME] — [DATE]
 
 Body:
 Hello [Name],
@@ -118,7 +118,7 @@ Duration: 60-90 minutes
 Location: [meeting link]
 
 Pre-work:
-- Product owner: list top 5 questions the dashboard must answer.
+- Product owner: list top 5 questions users need model outputs (predictions) to answer quickly (whether via dashboard, report, or app).
 - Designers: bring initial wireframes or sketches.
 - BI: prepare mock charts using sample data.
 

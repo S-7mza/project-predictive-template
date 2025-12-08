@@ -13,4 +13,4 @@ Non-functional requirements:
 - Latency, concurrency, retention, backups
 
 Deployment & infra notes:
-- Where dashboards are hosted, access controls, secrets management.
+- Where model-serving components and any dashboards/UIs are hosted, access controls, secrets management.

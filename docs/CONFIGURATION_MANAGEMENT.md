@@ -1,16 +1,16 @@
 Configuration Management Plan
 
 Purpose
-- Track versions of ETL code, SQL, dashboard artifacts, and infrastructure definitions.
+- Track versions of ETL/feature pipeline code, SQL, model artifacts, and infrastructure definitions (including any dashboards or UIs that consume predictions).
 
 Scope
-- Source code for ETL and BI (SQL, scripts, dbt models)
-- Dashboard files and workbook artifacts
+- Source code for ETL, feature pipelines, and model code (SQL, scripts, notebooks, dbt models)
+- Dashboard files, workbook artifacts, and application code that consume model outputs
 - Infrastructure-as-code (Terraform, ARM templates)
 - Runbooks and operational scripts
 
 Version Control
-- All code and dashboard artifacts stored in version control (git) with PR reviews.
+- All code, model artifacts (configs, notebooks/scripts), and dashboard/UI artifacts stored in version control (git) with PR reviews.
 - Semantic branching strategy: feature branches, develop/integration, release, main/prod.
 
 Change Control
@@ -27,5 +27,5 @@ Rollback & Traceability
 
 Responsibilities
 - DevOps: maintain CI/CD pipelines and release processes.
-- BI Lead: approve dashboard releases and manage schema versioning.
+- Data Science / ML Lead (and/or BI Lead): approve model and UI/dashboard releases and manage schema/versioning.
 - PM: coordinate approvals for scope changes.

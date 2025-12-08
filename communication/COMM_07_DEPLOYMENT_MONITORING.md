@@ -1,9 +1,10 @@
 # Communication Plan – Workshop 7: Deployment & Monitoring
 
 ## 1. Objectives
+- Lifecycle role: connect **validated models** to **production deployment and monitoring**, ensuring readiness for early-life support and ongoing benefits tracking.
 - Align all technical and business stakeholders on the go-live plan.
 - Clearly communicate deployment windows, potential impacts, and rollback strategy.
-- Explain monitoring, alerting, and incident response for the new dashboard.
+- Explain monitoring, alerting, and incident response for the deployed predictive model and any consuming dashboards/UIs.
 - Confirm who is on point during and after deployment.
 
 ## 2. Stakeholder Groups
@@ -23,11 +24,11 @@
 
 **From:** BI Lead  
 **To:** DevOps/Ops; BI Lead; Security; Product Owner; key users  
-**Subject:** `[Dashboard Project] Deployment & Monitoring workshop – hold the date`
+**Subject:** `[Predictive Analysis Project] Deployment & Monitoring workshop – hold the date`
 
 Hi all,
 
-As we approach go-live for the **Dashboard Project**, we will hold a **Deployment & Monitoring workshop** to review the runbook, monitoring setup, and support model.
+As we approach go-live for the **Predictive Analysis / ML Project**, we will hold a **Deployment & Monitoring workshop** to review the model deployment runbook, monitoring setup (including drift and performance), and support model.
 
 **Proposed slot:** Week 6 – 60 minutes  
 **Participants:** DevOps/Ops; BI Lead; Security; Product Owner; key users
@@ -42,7 +43,7 @@ BI Lead
 
 **From:** BI Lead  
 **To:** Confirmed participants  
-**Subject:** `[Dashboard Project] Deployment & Monitoring – agenda & pre-work`
+**Subject:** `[Predictive Analysis Project] Deployment & Monitoring – agenda & pre-work`
 
 Hi all,
 
@@ -74,7 +75,7 @@ BI Lead
 
 **From:** BI Lead  
 **To:** Participants  
-**Subject:** `Reminder – Dashboard Deployment & Monitoring workshop today`
+**Subject:** `Reminder – Predictive Analysis Project Deployment & Monitoring workshop today`
 
 Hi all,
 
@@ -93,7 +94,7 @@ BI Lead
 
 **From:** DevOps Lead  
 **To:** Participants; sponsor; support teams  
-**Subject:** `[Dashboard Project] Deployment & Monitoring – recap & next steps`
+**Subject:** `[Predictive Analysis Project] Deployment & Monitoring – recap & next steps`
 
 Hi all,
 

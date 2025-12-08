@@ -6,8 +6,9 @@ This plan structures all communication around the **Performance & QA / Validatio
 
 ## 1. Objectives
 
+- Lifecycle role: act as the formal **Model Validation / QA** checkpoint before production deployment and benefits tracking.
 - Align business, QA, and technical teams on **test scope**, **success criteria**, and **acceptance conditions**.
-- Validate that the dashboard meets **functional**, **performance**, **data quality**, and **usability** expectations.
+- Validate that the predictive model and any consuming UIs/dashboards meet **functional**, **performance**, **data quality**, and **usability** expectations.
 - Clarify **defect triage**, severity definitions, and **retesting** approach.
 - Ensure all findings are documented and traceable to **user stories**, **KPI specs**, and **requirements**.
 
@@ -19,7 +20,7 @@ This plan structures all communication around the **Performance & QA / Validatio
 - **QA Lead / Test Manager**
 - **Product Owner**
 - **Business key users / UAT representatives**
-- **BI / dashboard developers**
+- **Data Science / ML engineers and BI / UI developers**
 - **Data engineers** (for defect analysis when needed)
   
 
@@ -39,14 +40,14 @@ This plan structures all communication around the **Performance & QA / Validatio
 
 **From:** Tech Manager  
 **To:** QA lead; Product Owner; key business testers; BI/dev team  
-**Subject:** `[Dashboard Project] Performance & QA / Validation – hold the date`
+**Subject:** `[Predictive Analysis Project] Model Performance & QA / Validation – hold the date`
 
 Hi all,
 
-We are planning a **Performance & QA / Validation workshop** for the **Dashboard Project** to align on test scope, approach, and acceptance criteria before formal UAT.
+We are planning a **Model Performance & QA / Validation workshop** for the **Predictive Analysis / ML Project** to align on test scope, approach, and acceptance criteria before formal UAT and model go-live.
 
 **Objective:**
-- Confirm how we will **validate the dashboard** from a business, data, and performance standpoint and agree on go/no-go criteria.
+- Confirm how we will **validate the model and consuming UIs/dashboards** from a business, data, and performance standpoint and agree on go/no-go criteria.
 
 **Proposed slot:** Week X, Day Y – 90–120 minutes  
 **Participants:** QA lead, Product Owner, business key users, BI/dev team, Tech Manager
@@ -62,7 +63,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Confirmed participants  
-**Subject:** `[Dashboard Project] Performance & QA / Validation – agenda & pre-work`
+**Subject:** `[Predictive Analysis Project] Model Performance & QA / Validation – agenda & pre-work`
 
 Hi all,
 
@@ -97,7 +98,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Participants  
-**Subject:** `Reminder – Dashboard Project Performance & QA / Validation today`
+**Subject:** `Reminder – Predictive Analysis Project Model Performance & QA / Validation today`
 
 Hi all,
 
@@ -109,7 +110,7 @@ A quick reminder that our **Performance & QA / Validation** workshop is today:
 
 Please come prepared with:
 - Your view of **must-pass scenarios** for acceptance.
-- Any **historic issues** from previous dashboards (e.g., slow load times, incorrect figures, UX pain points).
+- Any **historic issues** from previous models or dashboards (e.g., poor predictions, slow load times, incorrect figures, UX pain points).
 - Any **constraints** about environment, data volumes, or test windows.
 
 See you there,
@@ -121,7 +122,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Participants; Sponsor / key stakeholders as needed  
-**Subject:** `[Dashboard Project] Performance & QA / Validation – recap & next steps`
+**Subject:** `[Predictive Analysis Project] Model Performance & QA / Validation – recap & next steps`
 
 Hi all,
 
@@ -157,11 +158,11 @@ Depending on the volume and severity of defects, schedule a short follow-up or s
 
 **From:** Tech Manager  
 **To:** QA lead; Product Owner; key stakeholders  
-**Subject:** `[Dashboard Project] QA status & go/no-go outlook`
+**Subject:** `[Predictive Analysis Project] QA status & go/no-go outlook`
 
 Hi all,
 
-Here is a status update on **QA / Validation** for the Dashboard Project.
+Here is a status update on **QA / Validation** for the Predictive Analysis / ML Project.
 
 **1. Defect summary**  
 - `<X open critical, Y high, Z medium/low>`
@@ -184,11 +185,11 @@ Tech Manager
 
 To ensure QA/validation communication follows best practices, check that:
 
-- **Scope is crystal clear:** What is in and out of scope for this QA phase is explicitly stated and agreed.
+- **Scope is crystal clear:** What is in and out of scope for this QA phase (including which model versions, datasets, and consumption UIs) is explicitly stated and agreed.
 - **Acceptance criteria are written and shared:** Criteria are aligned with `agile/DEFINITION_OF_DONE.md` and `docs/TEST_UAT_PLAN (C).md` and visible to all testers.
 - **Defect process is unambiguous:** Everyone knows **where** to log defects, **how** to classify them, and **who** triages and approves fixes.
 - **Environment and data readiness are addressed:** Emails mention any constraints on test data, masking, refresh windows, or access and how they will be handled.
 - **Risks and escalations are linked:** Major issues are reflected in `templates/RISK_REGISTER.md`, and escalations follow the governance model in `docs/COMMUNICATION_PLAN.md` and `02_GATING_CHECKLIST (C).md`.
-- **Feedback loops are planned:** There is a clear way for testers to ask questions and for the team to update them on fixes and retests.
+- **Feedback loops are planned:** There is a clear way for testers to ask questions and for the team to update them on fixes and retests, feeding results into gate decisions (`02_GATING_CHECKLIST (C).md`) and release planning.
 
 If all of the above are covered, the QA / Validation communication stream will strongly support a robust and auditable go/no-go decision.

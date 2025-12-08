@@ -6,7 +6,8 @@ This plan ensures everyone understands how **business concepts** will be transla
 
 ## 1. Objectives
 
-- Align business and technical stakeholders on the **logical data model** and **semantic layer** for the dashboard.
+- Lifecycle role: turn Data & Feature Discovery outputs into a concrete **feature and data model design** that the ETL/feature pipelines and model training will implement.
+- Align business and technical stakeholders on the **logical data model**, **feature sets**, and **semantic layer** that will support the predictive model and any consuming UIs/dashboards.
 - Define **facts, dimensions, measures, and hierarchies** that support the agreed KPIs.
 - Decide on **naming conventions, grain, and aggregation rules**.
 - Identify modeling constraints from **source data** and **tooling** (e.g., Power BI, Tableau, Looker, custom solution).
@@ -37,14 +38,14 @@ This plan ensures everyone understands how **business concepts** will be transla
 
 **From:** Tech Manager  
 **To:** BI lead; data modeler; Product Owner; business SMEs  
-**Subject:** `[Dashboard Project] Data Modeling / Semantic Layer – hold the date`
+**Subject:** `[Predictive Analysis Project] Data Modeling / Feature Design – hold the date`
 
 Hi all,
 
-Following the **Technical Data Discovery** workshop, we will run a **Data Modeling / Semantic Layer workshop** to agree how the data will be structured to support the dashboard KPIs.
+Following the **Technical Data & Feature Discovery** workshop, we will run a **Data Modeling / Feature Design workshop** to agree how the data will be structured to support the predictive KPIs and model features.
 
 **Objective:**
-- Define the **analytics model** (facts, dimensions, hierarchies, business rules) that will power the dashboards.
+- Define the **analytics/feature model** (facts, dimensions, hierarchies, features, business rules) that will power the predictive model and any dashboards/UIs that consume its outputs.
 
 **Proposed slot:** Week X, Day Y – 90–120 minutes  
 **Participants:** BI lead, data modeler/architect, Product Owner, key business SMEs, Tech Manager
@@ -60,7 +61,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Confirmed participants  
-**Subject:** `[Dashboard Project] Data Modeling / Semantic Layer – agenda & pre-work`
+**Subject:** `[Predictive Analysis Project] Data Modeling / Feature Design – agenda & pre-work`
 
 Hi all,
 
@@ -94,7 +95,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Participants  
-**Subject:** `Reminder – Dashboard Project Data Modeling / Semantic Layer today`
+**Subject:** `Reminder – Predictive Analysis Project Data Modeling / Feature Design today`
 
 Hi all,
 
@@ -118,7 +119,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Participants; Sponsor / key stakeholders (as needed)  
-**Subject:** `[Dashboard Project] Data Modeling / Semantic Layer – recap & next steps`
+**Subject:** `[Predictive Analysis Project] Data Modeling / Feature Design – recap & next steps`
 
 Hi all,
 
@@ -152,11 +153,11 @@ Tech Manager
 
 To ensure communication is robust for this workshop, verify that:
 
-- **Inputs are aligned:** Everyone has a shared view of **KPIs** and data discovery outcomes before the meeting.
+- **Inputs are aligned:** Everyone has a shared view of **KPIs**, Data & Feature Discovery outputs, and lifecycle context (we are between Discovery and ETL/Feature Pipeline Design) before the meeting.
 - **Decisions are explicit:** The recap clearly lists modeling decisions and what is still open.
 - **Dependencies are visible:** Any dependency on later **data quality fixes** or **tool configuration** is recorded.
 - **Artifacts are linked:** Emails point to the updated `deliverables/KPI_SPEC (C).md`, data model diagrams, and `templates/DECISION_LOG.md`.
 - **Scope is realistic:** Communication makes clear what is **MVP** vs. later phase to avoid over-promising.
-- **Traceability:** There is a clear thread from **Project Charter** → **KPI spec** → **Model design** so stakeholders can follow the logic.
+- **Traceability:** There is a clear thread from **Project Charter** → **KPI spec** → **Data & Feature Discovery** → **Model/feature design** so stakeholders can follow the logic into later ETL and model training.
 
 If these points are covered, your modeling communication plan will help avoid confusion and rework downstream.

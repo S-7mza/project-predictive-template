@@ -1,13 +1,13 @@
 Agile Sprint Toolkit — Overview
 
 Purpose
-- Collection of templates, agendas, checklists and trackers to run Agile sprints for dashboard or analytics work.
+- Collection of templates, agendas, checklists and trackers to run Agile sprints for predictive analysis / ML work (and any dashboards or UIs that consume model outputs).
 
 Contents
 - `SPRINT_TEMPLATE.md` — sprint planning template and goals
 - `SPRINT_BACKLOG_TEMPLATE.csv` — backlog export template (stories, priority, estimate)
 - `USER_STORY_TEMPLATE.md` — standard story format and links to acceptance criteria
-- `DEFINITION_OF_DONE.md` and `DOD_CASES.md` — DoD and common cases for dashboard work
+- `DEFINITION_OF_DONE.md` and `DOD_CASES.md` — DoD and common cases for predictive model and model-consumption UI work
 - Ceremony templates: `SPRINT_PLANNING.md`, `DAILY_STANDUP.md`, `SPRINT_REVIEW.md`, `RETROSPECTIVE.md`
 - Capacity & tracking: `CAPACITY_PLANNING.md`, `VELOCITY_TRACKER.csv`, `BURNDOWN_TEMPLATE.csv`
 - Release & deployment: `RELEASE_PLAN.md`, `RELEASE_NOTES_TEMPLATE.md`, `DEPLOYMENT_CHECKLIST.md`

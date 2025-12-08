@@ -4,7 +4,7 @@ Purpose
 - Describe the team's purpose and how it supports the project objectives.
 
 Team Composition
-- Team lead / BI Lead: [name]
+- Team lead / Data Science or ML Lead: [name]
 - Project Manager: [name]
 - BI Developers: [names]
 - Data Engineers: [names]
@@ -23,8 +23,8 @@ Decision Making
 
 Roles & Responsibilities (summary)
 - PM: Schedule, risk, stakeholder communications and approvals.
-- BI Lead: Approve KPI definitions, visual standards, and accept UAT.
-- BI Developers: Build dashboards, unit tests, performance checks.
+- Data Science / ML Lead: Approve model and KPI definitions, model standards, and accept validation.
+- Data Scientists / ML Engineers: Build, train, and validate models; implement unit tests and performance checks for model code.
 - Data Engineers: Build and maintain ETL and canonical tables.
 - QA: Define and run validation tests.
 
@@ -44,7 +44,7 @@ Team Norms & Values
 Success Measures
 - On-time deliveries of milestones.
 - Data quality thresholds met (<X% nulls, reconciled totals).
-- Adoption metrics (user logins, dashboard views, stakeholder satisfaction).
+- Adoption and impact metrics (model usage, quality of decisions supported by predictions, stakeholder satisfaction).
 
 Review cadence
 - Review team charter quarterly or after each major release and update as needed.

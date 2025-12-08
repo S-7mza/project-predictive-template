@@ -1,7 +1,7 @@
-Data Governance Charter (dashboard project)
+Data Governance Charter (predictive analysis / ML project)
 
 Purpose
-- Define governance for data used by the dashboard: ownership, access, quality rules and stewardship.
+- Define governance for data used by the predictive models: ownership, access, quality rules and stewardship across training, validation, and production scoring.
 
 Ownership & Stewardship
 - Data Owner: accountable for the source dataset quality and access control.

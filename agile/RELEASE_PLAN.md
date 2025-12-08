@@ -1,7 +1,7 @@
 Release Plan
 
 Purpose
-- Define how increments (sprints) roll up into releases of the dashboard.
+- Define how increments (sprints) roll up into releases of the predictive model and any UIs/dashboards that consume its outputs.
 
 Release Overview
 - Release name: [Release 1]

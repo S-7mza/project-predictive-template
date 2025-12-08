@@ -22,11 +22,11 @@
 
 **From:** Tech Manager
 **To:** Sponsor; Product Owner; Tech leads; key stakeholders
-**Subject:** `[Dashboard Project] Kickoff – hold the date`
+**Subject:** `[Predictive Analysis Project] Kickoff – hold the date`
 
 Hi all,
 
-We are launching the **Dashboard Project** and would like to hold a **Kickoff workshop** to align on objectives, scope, roles, and the high-level plan.
+We are launching the **Predictive Analysis / ML Project** and would like to hold a **Kickoff workshop** to align on objectives, scope, roles, and the high-level plan.
 
 **Proposed slot:** Week 0, Day 0 – 60–90 minutes
 **Participants:** Sponsor, Product Owner, Tech leads
@@ -41,11 +41,11 @@ Tech Manager
 
 **From:** Tech Manager
 **To:** Confirmed participants
-**Subject:** `[Dashboard Project] Kickoff – agenda & pre-work`
+**Subject:** `[Predictive Analysis Project] Kickoff – agenda & pre-work`
 
 Hi all,
 
-Thank you for holding time for the **Dashboard Project Kickoff**. Below are the details:
+Thank you for holding time for the **Predictive Analysis Project Kickoff**. Below are the details:
 
 **When:** Week 0, Day 0 – 60–90 minutes  
 **Where:** <meeting room or virtual link>  
@@ -71,11 +71,11 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Participants  
-**Subject:** `Reminder – Dashboard Project Kickoff today`
+**Subject:** `Reminder – Predictive Analysis Project Kickoff today`
 
 Hi all,
 
-A quick reminder that our **Dashboard Project Kickoff** is today:
+A quick reminder that our **Predictive Analysis Project Kickoff** is today:
 
 
 Please bring:
@@ -88,11 +88,11 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Participants; key stakeholders (cc Sponsor)
-**Subject:** `[Dashboard Project] Kickoff – recap & next steps`
+**Subject:** `[Predictive Analysis Project] Kickoff – recap & next steps`
 
 Hi all,
 
-Thank you for your time and contributions during the **Dashboard Project Kickoff**. Below is a brief summary.
+Thank you for your time and contributions during the **Predictive Analysis Project Kickoff**. Below is a brief summary.
 
 **1. Confirmed objectives**
 

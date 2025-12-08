@@ -1,6 +1,6 @@
-# Dashboard Project Playbook Web UI
+# Predictive Analysis Project Playbook Web UI
 
-This `web/` folder contains a static, modern web interface that acts as the single reference to manage the dashboard project end-to-end.
+This `web/` folder contains a static, modern web interface that acts as the single reference to manage the predictive analysis / machine learning project end-to-end.
 
 ## Features
 

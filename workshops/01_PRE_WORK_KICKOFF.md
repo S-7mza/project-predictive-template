@@ -4,9 +4,9 @@ Share at least 3 working days before the session.
 
 Required items
 - Confirm attendees and roles (update `docs/PROJECT_BRIEF.md`).
-- Provide 1-page project summary: objective, timeline, success criteria.
-- Sponsor to prepare desired outcomes and constraints.
-- BI Lead to draft proposed milestones and initial `templates/RACI.md` entries.
+- Provide 1-page project summary: business problem, predictive use case, timeline, success criteria.
+- Sponsor to prepare desired outcomes and constraints (including risk appetite for model-driven decisions).
+- Data Science / ML Lead to draft proposed milestones and initial `templates/RACI.md` entries.
 - Share logistics: meeting link, expected duration, recording plan, and shared whiteboard.
 
 Attachments to include in invite

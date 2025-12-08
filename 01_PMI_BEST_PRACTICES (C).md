@@ -1,7 +1,7 @@
-PMI Best Practices — Dashboard Projects (PMBOK-aligned)
+PMI Best Practices — Predictive Analysis Projects (PMBOK-aligned)
 
 Purpose
-- Capture core PMI/PMBOK best practices adapted for delivering analytics and dashboard projects. Use this as a checklist and governance guide alongside the project templates in the repo.
+- Capture core PMI/PMBOK best practices adapted for delivering predictive analysis / machine learning projects. Use this as a checklist and governance guide alongside the project templates in the repo.
 
 Overview — How to use this file
 - Treat each section as a short, actionable checklist for the project lifecycle. Link the artifacts referenced (charter, RACI, test plan, etc.) into your repo and keep them current.
@@ -14,12 +14,12 @@ Overview — How to use this file
 - Maintain a Benefits Realization plan (`docs/BENEFITS_REALIZATION.md`) with owners and measurement cadence to keep the project outcome-focused.
 
 2. Scope Management
-- Define deliverables clearly (KPI spec, data inventory, model, dashboards, runbooks). Record acceptance criteria per deliverable (`templates/ACCEPTANCE_CRITERIA.md`).
+- Define deliverables clearly (model spec, prediction output spec, data inventory, model artifacts, runbooks). Record acceptance criteria per deliverable (`templates/ACCEPTANCE_CRITERIA.md`).
 - Use a Work Breakdown Structure (WBS) or checklist to decompose deliverables into manageable tasks/activities (include in `docs/PROJECT_PLAN.md`).
 - Manage scope changes via the Change Request workflow; require impact analysis on schedule/cost and a sponsor decision.
 
 3. Schedule Management
-- Create a timeline with milestones for Kickoff, Data Discovery, Modeling, ETL, Prototype, UAT, Deployment and Handoff. Store in `00_WORKSHOP_TIMEPLAN (C).md`.
+- Create a timeline with milestones for Kickoff, Data & Feature Discovery, Feature Engineering / Modeling, ETL/feature pipelines, Model Training, Model Validation, Deployment and Handoff. Store in `00_WORKSHOP_TIMEPLAN (C).md`.
 - Identify critical path items: Data access, Modeling decisions, ETL availability — treat these as gating milestones.
 - Use timeboxed workshops and regular demos to prevent long feedback loops.
 - Use `PMI/GATING_CHECKLIST.md` at each major milestone to formalize Go/No-Go decisions and record sign-offs.
@@ -29,8 +29,8 @@ Overview — How to use this file
 - Maintain a simple resource plan showing availability, key role assignments and external vendor dependencies.
 
 5. Quality Management
-- Define quality objectives and metrics (accuracy thresholds, null-rate limits, dashboard load times) in `docs/QUALITY_MANAGEMENT_PLAN.md`.
-- Link each KPI to measurable acceptance criteria and test cases (`templates/ACCEPTANCE_CRITERIA.md`) and include them in the `docs/TEST_UAT_PLAN.md`.
+- Define quality objectives and metrics (data quality thresholds, model performance targets, latency limits) in `docs/QUALITY_MANAGEMENT_PLAN.md`.
+- Link each key metric and prediction use case to measurable acceptance criteria and test cases (`templates/ACCEPTANCE_CRITERIA.md`) and include them in the `docs/MODEL_VALIDATION_PLAN (C).md`.
 - Automate validation where possible (scripts in `scripts/`, smoke tests at deploy) and run periodic audits post-release.
 
 6. Stakeholder & Communications Management
@@ -57,9 +57,9 @@ Overview — How to use this file
 - Require security sign-off on production access and on the runbook before deployment.
  - Define operational SLOs and monitoring metrics in `docs/MONITORING_SLO_CHECKLIST.md` and keep deployment and rollback procedures in `docs/DEPLOYMENT_RUNBOOK.md` with supporting scripts under `scripts/`.
 
-11. Testing and UAT
-- Prepare test cases mapped to acceptance criteria and automate where possible. Keep test artifacts in `docs/tests/` or `scripts/` and follow `docs/TEST_UAT_PLAN.md`.
-- Define clear exit criteria for UAT (P0 defects resolved, reconciliation thresholds met, performance targets passed).
+11. Testing and Validation
+- Prepare test cases mapped to acceptance criteria and automate where possible. Keep test artifacts in `docs/tests/` or `scripts/` and follow `docs/MODEL_VALIDATION_PLAN (C).md`.
+- Define clear exit criteria for validation/UAT (P0 defects resolved, reconciliation thresholds met, model performance targets passed).
 
 12. Procurement of Environments & Operations Readiness
 - Record environment inventories (Dev / Staging / Prod) in `docs/ENVIRONMENT_INVENTORY.md` with owners and vault locations for secrets.
@@ -88,10 +88,10 @@ Practical Workshop & Documentation Checklist (PMI-aligned)
 Recommended Artifacts to store in repo (quick list)
 - `docs/PROJECT_CHARTER (C).md`, `docs/PROJECT_PLAN (C).md`, `00_WORKSHOP_TIMEPLAN (C).md`
 - `docs/PROJECT_BRIEF.md`, `docs/BUSINESS_MODEL_CANVAS.md`, `docs/BENEFITS_REALIZATION.md`
-- `deliverables/` (KPI_SPEC (C).md, DATA_INVENTORY (C).md, VIS_SPEC (C).md, ARCHITECTURE.md)
+- `deliverables/` (MODEL_SPEC (C).md, DATA_INVENTORY (C).md, PREDICTION_OUTPUT_SPEC (C).md, ARCHITECTURE.md)
 - `workshops/` (numbered agendas & pre-work checklists)
 - `templates/` (ACTION_LOG.csv, ISSUE_LOG.md, RACI.md, DECISION_LOG.md, CHANGE_REQUEST.md, ACCEPTANCE_CRITERIA.md)
-- `docs/QUALITY_MANAGEMENT_PLAN.md`, `docs/TEST_UAT_PLAN (C).md`, `docs/DATA_GOVERNANCE (C).md`, `docs/CONFIGURATION_MANAGEMENT.md`, `docs/ENVIRONMENT_INVENTORY.md`
+- `docs/QUALITY_MANAGEMENT_PLAN.md`, `docs/MODEL_VALIDATION_PLAN (C).md`, `docs/DATA_GOVERNANCE (C).md`, `docs/CONFIGURATION_MANAGEMENT.md`, `docs/ENVIRONMENT_INVENTORY.md`
 
 Closing notes and recommended next steps
 - Map these PMI practices to your project by filling the templates and linking artifacts from the README for easy onboarding.

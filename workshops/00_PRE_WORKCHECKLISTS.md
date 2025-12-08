@@ -19,11 +19,11 @@ Use these checklists to ensure each workshop is efficient and productive. Share 
 - BI/ETL to prepare initial tooling list (SQL client, transformation tool).
 - Attach: `deliverables/DATA_INVENTORY.md`, sample SQL templates (see `templates`).
 
-3) Data Modeling / Semantic Layer — Pre-work
-- Provide outputs from Data Discovery: schemas, sample extracts, keys and cardinalities.
+3) Feature Engineering / Data Modeling — Pre-work
+- Provide outputs from Data & Feature Discovery: schemas, sample extracts, keys and cardinalities.
 - Stakeholders to confirm canonical definitions for core entities (e.g., customer, account).
-- BI to draft proposed dimension tables and grain definitions.
-- Attach: `deliverables/KPI_SPEC.md` (draft) and `deliverables/DATA_INVENTORY.md`.
+- Data scientists to draft proposed feature sets and grain definitions.
+- Attach: `deliverables/MODEL_SPEC (C).md` (draft) and `deliverables/DATA_INVENTORY (C).md`.
 
 4) ETL / Pipeline Design (technical) — Pre-work
 - ETL engineers to draft transformation pseudo-SQL or pipeline diagrams.
@@ -32,12 +32,12 @@ Use these checklists to ensure each workshop is efficient and productive. Share 
 - Prepare sample data quality rules and failing-case examples.
 - Attach: ETL runbook draft, pipeline diagram (if available).
 
-5) Dashboard Design (UX + BI) — Pre-work
-- Product owner to provide primary user stories and persona list.
-- Request mocked sample dataset (aggregated) for prototyping.
-- Designers to prepare initial wireframes or moodboard.
-- BI devs to prepare sample charts with the mock dataset.
-- Attach: `deliverables/KPI_SPEC.md`, wireframes.
+5) Model Training & Experimentation — Pre-work
+- Product owner to provide primary user stories and decision scenarios that will use predictions.
+- Request sampled training/validation datasets (with target variable) for experimentation.
+- Data scientists to prepare baseline models or analytical notebooks (if any).
+- Data/ML engineers to confirm compute environment and tooling for experiments.
+- Attach: `deliverables/MODEL_SPEC (C).md`, `deliverables/DATA_INVENTORY (C).md`.
 
 6) Performance & QA / Validation Workshop — Pre-work
 - Provide baseline query runtimes and example concurrency expectations.
@@ -52,9 +52,9 @@ Use these checklists to ensure each workshop is efficient and productive. Share 
 - Attach: `scripts/README.md` and deployment environment notes.
 
 8) User Training & Handoff Review — Pre-work
-- Provide final dashboards for demo and training materials (slides).
-- Prepare a short training plan and a list of user groups to train.
-- Complete `follow_up/FUP_TEMPLATE.md` with initial handoff notes.
+- Provide access to the interface(s) where predictions are consumed (dashboards, apps, reports, APIs) and training materials (slides).
+- Prepare a short training plan and a list of user groups to train, focusing on how to interpret and act on predictions.
+- Complete `follow_up/FUP_TEMPLATE.md` with initial handoff notes and support contacts for the model.
 
 9) Retrospective / Post-release — Pre-work
 - Collect feedback notes, bug list, enhancement backlog and usage metrics.

@@ -13,7 +13,7 @@ Attendees: ETL engineers, data owners, BI dev, ops/devops
 - Scheduler choices, retry and failure strategies, dependencies.
 
 4. Monitoring & alerting (15 min)
-- Define job-level and pipeline-level alerts, logging and dashboards.
+- Define job-level and pipeline-level alerts, logging, and monitoring for data drift and pipeline health.
 
 5. Runbook & recovery (15 min)
 - Recovery steps, manual interventions and rollbacks.

@@ -1,7 +1,7 @@
-DoD Cases for Dashboard Project
+DoD Cases for Predictive Analysis / ML Project
 
 Overview
-This document consolidates Definition of Done (DoD) cases tailored to common work types in a dashboard project. Each case lists testable criteria and the expected evidence when the work is declared "Done".
+This document consolidates Definition of Done (DoD) cases tailored to common work types in a predictive analysis / ML project. Each case lists testable criteria and the expected evidence when the work is declared "Done".
 
 1) Simple Bug Fix
 - Criteria:
@@ -14,7 +14,7 @@ This document consolidates Definition of Done (DoD) cases tailored to common wor
 - Evidence:
   - Issue with repro steps, PR link + CI green, staging smoke test notes, entry in `templates/DECISION_LOG.md` or `templates/ISSUE_LOG.md`.
 
-2) New KPI / Dashboard Visual
+2) New KPI / Model Output Visual (e.g., dashboard tile, report, or app view)
 - Criteria:
   - KPI spec completed and approved (`deliverables/KPI_SPEC.md`).
   - Data source(s), transformations and lineage documented.
@@ -56,7 +56,7 @@ This document consolidates Definition of Done (DoD) cases tailored to common wor
   - No functional regressions.
   - Monitoring thresholds updated to reflect new performance expectations.
 - Evidence:
-  - Perf test reports, before/after charts, CI job results, updated monitoring dashboards.
+  - Perf test reports, before/after charts, CI job results, updated monitoring dashboards / views.
 
 6) Security / Privacy Sensitive Change
 - Criteria:
@@ -73,10 +73,10 @@ This document consolidates Definition of Done (DoD) cases tailored to common wor
   - All release items pass CI/CD.
   - Staging smoke tests pass and stakeholders approve.
   - Deployment runbook updated and validated; rollback tested.
-  - Monitoring + SLO dashboards and alerting in place.
+  - Monitoring + SLO views/dashboards and alerting in place.
   - Release notes and stakeholder communication prepared.
 - Evidence:
-  - CI/CD pipeline status, runbook, monitoring dashboards, release announcement, Decision Log sign-off.
+  - CI/CD pipeline status, runbook, monitoring views/dashboards, release announcement, Decision Log sign-off.
 
 8) Spike / Research / Prototype
 - Criteria:

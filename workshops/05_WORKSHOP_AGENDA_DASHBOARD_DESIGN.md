@@ -1,21 +1,29 @@
-Dashboard Design — Agenda (detailed)
+Model Training & Experimentation — Agenda (detailed)
 
 Duration: 90 minutes
-Attendees: Product Owner, Designer, BI Dev
+Attendees: Product Owner, Data Science Lead, Data Scientists, Data/ML Engineers
 
-1. Recap objectives & KPIs (10 min)
+1. Recap objectives & target metrics (10 min)
+- Revisit business objectives, target variable(s), and success metrics (e.g., AUC, F1, RMSE, uplift).
 
-2. Wireframe walkthrough (30 min)
-- Present proposed layouts, views, and user journeys.
+2. Data & feature review (20 min)
+- Review available features, data quality, and coverage across key segments.
+- Confirm any new feature ideas and feasibility.
 
-3. Visualization mapping (25 min)
-- Map KPIs to chart types, discuss interactions, filters and drill paths.
+3. Experiment design (30 min)
+- Agree on baseline models and candidate algorithms.
+- Define experiment matrix (features, hyperparameters, training windows, sampling strategy).
+- Decide how to split data (train/validation/test, time-based splits if needed).
 
-4. Accessibility & standards (15 min)
-- Color, contrast, labels and keyboard navigation.
+4. Evaluation & comparison plan (20 min)
+- Confirm primary and secondary metrics, including by segment.
+- Define how results will be compared and documented.
+- Align on thresholds for “good enough to move to validation/UAT”.
 
-5. Prototype & data needs (10 min)
-- Identify mock data and transformations required for each view.
+5. Next steps & ownership (10 min)
+- Assign owners to experiments and expected timelines.
+- Capture risks, dependencies, and required support (e.g., infra, data access).
 
 Outputs
-- Signed wireframes, `deliverables/VIS_SPEC.md` updates, and prototyping dataset.
+- Updated `deliverables/MODEL_SPEC (C).md` and experiment plan.
+- Clear list of experiments with owners, due dates, and success criteria.

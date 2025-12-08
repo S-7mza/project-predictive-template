@@ -1,7 +1,7 @@
-Workshop Timeplan Proposal (C) — Dashboard Project
+Workshop Timeplan Proposal (C) — Predictive Analysis Project
 
 Purpose
-- A recommended, sequenced timeplan for all meetings and workshops required to deliver the dashboard project. Includes dependencies, pre-work windows, suggested durations, and critical-path highlight.
+- A recommended, sequenced timeplan for all meetings and workshops required to deliver the predictive analysis / machine learning project. Includes dependencies, pre-work windows, suggested durations, and critical-path highlight.
 
 How to read this plan
 - "Week" counts from project start (Kickoff = Week 0). Days assume business days.
@@ -9,26 +9,35 @@ How to read this plan
 - Sessions marked **CRITICAL** are on the project's critical path; delays there delay the project.
 
 Summary (priority order — most important first)
-1. Kickoff (CRITICAL)
-2. Technical Data Discovery (deep) (CRITICAL)
-3. Data Modeling / Semantic Layer (CRITICAL)
-4. ETL / Pipeline Design (CRITICAL)
-5. Dashboard Design (UX + BI)
-6. Performance & QA / Validation
-7. Deployment & Monitoring
-8. User Training & Handoff
-9. Retrospective / Benefits Review
+1. Kickoff & Framing (CRITICAL)
+2. Technical Data & Feature Discovery (deep) (CRITICAL)
+3. Feature & Model Design (CRITICAL)
+4. ETL / Feature Pipeline & Store Design (CRITICAL)
+5. Model Training & Experimentation
+6. Model Validation & QA / UAT
+7. Deployment & Monitoring (Model + Pipelines)
+8. User Training, Adoption & Handoff (Using Predictions)
+9. Retrospective, Benefits & Continuous Improvement
 
-Suggested 8-week timeline (example)
-- Week 0 (Day 0–5): Kickoff + initial stakeholder alignment
-- Week 1 (Day 6–12): Technical Data Discovery (deep) — collect samples, access provisioning
-- Week 2 (Day 13–19): Data Modeling / Semantic Layer workshop
-- Week 3 (Day 20–26): ETL/Pipeline design workshops and begin implementation
-- Week 4 (Day 27–33): Dashboard prototyping & design iterations
-- Week 5 (Day 34–40): QA & validation, automated checks
-- Week 6 (Day 41–47): Finalize deployment, monitoring & runbook
-- Week 7 (Day 48–54): User training and formal handoff
-- Week 8 (Day 55–61): Retrospective and benefits first review
+Suggested 12-week baseline timeline (example)
+- Week 0: Kickoff & Framing; initial stakeholder alignment; start Security/Privacy prep
+- Weeks 1–3: Technical Data & Feature Discovery (deep); collect samples, provision access, profile and document data
+- Weeks 3–4: Feature & Model Design; agree on canonical entities, features, targets, and evaluation strategy
+- Weeks 4–5: ETL/Feature pipeline & feature store design; start implementation of base tables and monitoring hooks
+- Weeks 5–7: Model Training & Experimentation iterations; establish baselines and candidate models with experiment tracking
+- Weeks 7–8: Model Validation & QA/UAT; run validation plan, address issues, and confirm go/no-go criteria
+- Weeks 8–9: Finalize deployment (model + pipelines), monitoring & runbook; smoke tests and rollback readiness
+- Weeks 9–10: User training on predictions, adoption review, and formal handoff to BAU
+- Weeks 10–11: Retrospective, first benefits review, and continuous improvement planning
+
+Compressed 6–8 week option (high availability, higher risk)
+- Week 0: Kickoff, Security/Privacy, and immediate data-access requests
+- Weeks 1–2: Accelerated Data & Feature Discovery with full-time data-owner support; begin rough Feature & Model Design
+- Weeks 2–3: Intensive Feature Engineering and ETL/feature store design sprint with daily checkpoints
+- Weeks 3–4: Rapid Model Training & Experimentation with partial/rough datasets and frequent stakeholder feedback
+- Weeks 4–5: Focused Model Validation & QA/UAT on the most critical cases; agree on minimum viable quality thresholds
+- Weeks 5–6 (or 5–8 for more caution): Minimal viable Deployment & Monitoring, User Training, and Handoff
+Notes: Use the compressed option only when stakeholders and data owners are highly available and willing to trade depth of validation and robustness for speed.
 
 Detailed Session Plan
 
@@ -40,27 +49,27 @@ Recurring coordination meetings
 - Prototype demo cadence: end of Week 4 and Week 5 (UAT demo). Purpose: gather feedback and sign-offs. Participants: Stakeholders. Priority: High
 
 Critical path & blockers (summary)
-- Data access & sample completeness: Any delay in access or samples blocks Data Discovery and therefore Modeling and ETL. Pre-provision access 5–7 days before the Data Discovery session.
-- Modeling decisions (grain, joins, canonical entities): If modeling is delayed, ETL and dashboard development cannot progress reliably.
-- ETL implementation & data freshness: ETL must provide reliable datasets for QA and prototyping; prioritize automation and monitoring early.
+- Data access & sample completeness: Any delay in access or samples blocks Data & Feature Discovery and therefore Modeling/Feature Engineering and ETL. Pre-provision access 5–7 days before the Data Discovery session.
+- Modeling/feature decisions (grain, joins, canonical entities, feature definitions): If modeling is delayed, ETL/feature pipelines and model development cannot progress reliably.
+- ETL/feature pipeline implementation & data freshness: pipelines must provide reliable datasets for QA and experimentation; prioritize automation and monitoring early.
 
 Parallelization opportunities
-- While ETL engineers build base tables, designers and BI developers can progress with mock/aggregated datasets for visualization design.
-- Small teams can run Data Modeling and Dashboard Design in parallel if sample data is available and responsibilities are clear.
+- While data/ML engineers build base tables and feature stores, data scientists can progress with offline model experiments using sampled datasets.
+- Small teams can run Feature Engineering and initial Model Training in parallel if sample data is available and responsibilities are clear.
 
 Compressed schedule option (2–3 week sprint)
 - Day 0: Kickoff + immediate request for samples and access.
-- Days 1–3: Technical Data Discovery (accelerated) — must have full-time support from data owners.
-- Days 4–6: Modeling + ETL design sprint (daily checkpoints).
-- Days 7–10: Dashboard rapid prototype using mock data; iterate with stakeholders.
-- Days 11–14: QA, deploy minimal viable dashboard, run training and handoff.
+- Days 1–3: Technical Data & Feature Discovery (accelerated) — must have full-time support from data owners.
+- Days 4–6: Feature engineering + ETL/feature store design sprint (daily checkpoints).
+- Days 7–10: Rapid model experimentation with mock/partial data; iterate with stakeholders on prediction usefulness.
+- Days 11–14: Validation, deploy a minimal viable model, run training on how to use predictions and handoff.
 Notes: Compression is high-risk; ensure stakeholders and data owners are available and accept trade-offs on depth of validations.
 
-Pre-work deadlines (recommended)
+ Pre-work deadlines (recommended)
 - Kickoff pre-work: 3 working days before Kickoff.
 - Data Discovery: request samples and access 5–7 working days before session; samples delivered >=3 days before.
-- Modeling & ETL: modeling inputs available 3 days prior.
-- Design: wireframes and mock datasets 3 days prior.
+- Feature & Model Design: modeling inputs (data discovery outputs, KPIs, initial feature ideas) available 3 days prior.
+- Model Training & Validation: labeled datasets and draft validation metrics available 3 days prior.
 - QA: validation rules and expected totals 3 days prior.
 
 PMI gating criteria (Go/No-Go gates per milestone)
@@ -86,12 +95,12 @@ Below are the recommended PMI-style gating criteria to confirm before moving fro
 	- KPI definitions mapped to model fields in `deliverables/KPI_SPEC.md`.
 	- Performance considerations and partitioning strategy noted.
 
-- After ETL Implementation (gate: Proceed to Dashboard prototyping / QA)
+- After ETL / feature pipeline implementation (gate: Proceed to baseline model development / QA)
 	- ETL jobs run successfully in staging with reproducible results and scheduled runs.
 	- Basic reconciliation tests pass (key totals match source within acceptance thresholds).
 	- Monitoring and alerting for ETL job failures configured and tested.
 
-- After Dashboard Prototype (gate: Proceed to UAT)
+- After initial model prototype (gate: Proceed to UAT / model validation)
 	- Wireframes and mockups signed off by Product Owner.
 	- Prototype connects to staging datasets and demonstrates key interactions.
 	- Initial performance benchmarks meet targets for critical views.
@@ -106,16 +115,16 @@ Below are the recommended PMI-style gating criteria to confirm before moving fro
 	- Training completed and `follow_up/FUP_TEMPLATE.md` contains support contacts and SLA expectations.
 	- Benefits tracking plan initiated and baseline metrics recorded (`docs/BENEFITS_REALIZATION.md`).
 
-Deliverables / outputs per session (quick list)
-- Kickoff: Updated `docs/PROJECT_BRIEF.md`, action log entries
-- Data Discovery: Completed `deliverables/DATA_INVENTORY.md` and sample extracts
-- Data Modeling: Model diagram and canonical table definitions
-- ETL Design: Pipeline diagrams, schedules, and runbook drafts
-- Dashboard Design: Wireframes, `deliverables/KPI_SPEC.md` finalized
-- QA & Validation: QA plan, validation scripts, acceptance tests
-- Deployment: Runbook, monitoring thresholds, access setup
-- Training: Training slides and recorded sessions, `follow_up/FUP_TEMPLATE.md` updated
-- Retrospective: Retrospective notes, prioritized backlog
+ Deliverables / outputs per session (quick list)
+- Kickoff & Framing: Updated `docs/PROJECT_BRIEF.md`, confirmed predictive use case, target variable(s), and action log entries
+- Data & Feature Discovery: Completed `deliverables/DATA_INVENTORY (C).md`, sample extracts, and data/feature readiness notes
+- Feature & Model Design: Feature/model diagrams, canonical table definitions, and updated `deliverables/MODEL_SPEC (C).md`
+- ETL / Feature Pipeline & Store Design: Pipeline diagrams, schedules, feature store design, and ETL runbook drafts
+- Model Training & Experimentation: Experiment logs, candidate model artifacts, and draft predictive KPI results
+- Model Validation & QA / UAT: Validation plan, evaluation reports vs acceptance criteria, and UAT results
+- Deployment & Monitoring: Runbook, monitoring thresholds and alerts, access setup across environments
+- Training, Adoption & Handoff: Training slides and recordings, `follow_up/FUP_TEMPLATE.md` updated, adoption plan
+- Retrospective, Benefits & Improvement: Retrospective notes, prioritized backlog, and first `docs/BENEFITS_TRACKER.csv` updates
 
 Risk notes & mitigations tied to schedule
 - Risk: Access delays — Mitigation: escalate immediately to Sponsor; identify alternate sample sources.

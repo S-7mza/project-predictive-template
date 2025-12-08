@@ -1,6 +1,6 @@
 Acceptance Criteria Template
 
-Use this template to capture measurable acceptance conditions for a KPI, dashboard view, or deliverable.
+Use this template to capture measurable acceptance conditions for a KPI, model output (e.g., prediction or score), UI/dashboard view, or other deliverable.
 
 Item: [KPI / View / Deliverable]
 Owner: [Name]

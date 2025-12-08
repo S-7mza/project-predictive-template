@@ -1,7 +1,8 @@
 # Communication Plan – Workshop 9: Retrospective & Benefits Review
 
 ## 1. Objectives
-- Close the loop on the dashboard project and capture lessons learned.
+- Lifecycle role: close the loop on the predictive analysis / ML project, linking **model performance, adoption, and business impact** into concrete next steps.
+- Close the loop on the predictive analysis / ML project and capture lessons learned.
 - Review realized and expected benefits against the original business case.
 - Decide on follow-up actions, enhancements, and how to sustain value.
 
@@ -22,11 +23,11 @@
 
 **From:** Sponsor  
 **To:** Sponsor; Product Owner; BI Lead; key stakeholders  
-**Subject:** `[Dashboard Project] Retrospective & Benefits Review – invitation`
+**Subject:** `[Predictive Analysis Project] Retrospective & Benefits Review – invitation`
 
 Hi all,
 
-We are planning a **Retrospective & Benefits Review workshop** to close the current phase of the **Dashboard Project**.
+We are planning a **Retrospective & Benefits Review workshop** to close the current phase of the **Predictive Analysis / ML Project**.
 
 The goals of this session are to:
 - Reflect on what went well and what can be improved (process & collaboration).  
@@ -46,7 +47,7 @@ Sponsor
 
 **From:** Sponsor  
 **To:** Confirmed participants  
-**Subject:** `[Dashboard Project] Retrospective & Benefits Review – prep & material`
+**Subject:** `[Predictive Analysis Project] Retrospective & Benefits Review – prep & material`
 
 Hi all,
 
@@ -56,11 +57,11 @@ Ahead of our **Retrospective & Benefits Review** (Week 8), please review the fol
 - Benefits narrative: `docs/BENEFITS_REALIZATION.md`  
 - Key incidents / issues logged during the project.
 
-To structure the discussion, consider:
-- What worked particularly well?  
-- What slowed us down or created frustration?  
-- Which benefits are clearly visible today? Which are lagging?  
-- What would you change for the next dashboard or release?
+To structure the discussion in lifecycle terms, consider:
+- What worked particularly well across data, modeling, deployment, and adoption?  
+- What slowed us down or created frustration at each phase?  
+- Which benefits (linked to model usage and predictions) are clearly visible today? Which are lagging?  
+- What would you change for the next model iteration, consumption UX, or release?
 
 Thank you,  
 Sponsor
@@ -89,7 +90,7 @@ Sponsor
 
 **From:** Sponsor  
 **To:** Participants; key stakeholders  
-**Subject:** `[Dashboard Project] Retrospective & Benefits – recap & actions`
+**Subject:** `[Predictive Analysis Project] Retrospective & Benefits – recap & actions`
 
 Hi all,
 

@@ -9,7 +9,7 @@ General Rules (apply to every user story or backlog item)
 - Tests: Unit tests and integration tests covering the change exist and pass locally and in CI. Test coverage for new code is acceptable per team threshold.
 - Static Analysis: Linting and static analysis checks pass.
 - Data Validation: Data pipelines and queries produce correct results against provided sample datasets; data schema changes are documented.
-- Performance: No regressions in critical dashboard queries or page load times; performance tests (if applicable) pass or are documented with mitigation.
+- Performance: No regressions in critical model-serving queries, prediction latency, or key dashboard/app views; performance tests (if applicable) pass or are documented with mitigation.
 - Security & Privacy: Security review completed for changes that touch sensitive data; secrets and credentials are not hard-coded.
 - Documentation: User-facing documentation, release notes, and runbook entries (if applicable) are updated. Technical docs updated for schema, ETL, and transformation logic.
 - Deployment: Changes are deployed to a staging environment and smoke-tested.
@@ -30,7 +30,7 @@ Governance
 
 Examples (short)
 - Simple UI bug fix: PR approved, unit tests pass, deployed to staging, PO verifies — Done.
-- New KPI: ETL transformations implemented and tested, dashboard visuals created with acceptance criteria met, performance validated, stakeholder demo + sign-off — Done.
+- New KPI / model output: ETL/feature transformations implemented and tested, model outputs (and any dashboard/app visuals) created with acceptance criteria met, performance validated, stakeholder demo + sign-off — Done.
 
 Related files
 - `agile/SPRINT_BACKLOG_TEMPLATE.csv`

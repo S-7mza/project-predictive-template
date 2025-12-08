@@ -1,5 +1,5 @@
 # deploy.ps1
-# Skeleton deployment script for dashboard components.
+# Skeleton deployment script for predictive model components.
 
 param(
     [ValidateSet("Dev","Staging","Prod")]
@@ -14,8 +14,8 @@ Write-Host "[Sample] Building artifacts..."
 # 2) Run migration / ETL updates
 Write-Host "[Sample] Running ETL migration for $Environment..."
 
-# 3) Deploy dashboard or BI assets
-Write-Host "[Sample] Publishing dashboards to $Environment..."
+# 3) Deploy model or analytics assets
+Write-Host "[Sample] Publishing predictive model services and related assets to $Environment..."
 
 # 4) Run smoke tests
 Write-Host "[Sample] Running smoke tests after deployment..."

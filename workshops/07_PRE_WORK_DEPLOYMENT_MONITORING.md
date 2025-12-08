@@ -18,5 +18,5 @@ Goals for the session
 - Confirm access and security/compliance checks before production.
 
 Post-meeting outputs
-- Finalized runbook, monitoring dashboards and alerting rules.
+- Finalized runbook, monitoring and alerting rules (including model and data drift signals).
 - Owners for on-call and support handover.

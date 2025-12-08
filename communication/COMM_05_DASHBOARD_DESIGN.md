@@ -6,10 +6,11 @@ This plan focuses on communication around the **Dashboard Design (UX + BI)** wor
 
 ## 1. Objectives
 
-- Align on **user journeys**, **personas**, and **key use cases** for the dashboard.
+- Lifecycle role: design **model consumption UX** (dashboards/apps/reports) so that predictions are surfaced in a way that supports decisions and testing in later QA/UAT.
+- Align on **user journeys**, **personas**, and **key use cases** for consuming model outputs.
 - Define **layout, navigation, and visual standards** (colors, typography, interaction patterns).
 - Agree on **prioritized views** (landing page, detail pages, drill-downs).
-- Capture UX decisions and constraints to guide build and future iterations.
+- Capture UX decisions and constraints to guide build, QA, and future iterations.
 
 ---
 
@@ -38,11 +39,11 @@ This plan focuses on communication around the **Dashboard Design (UX + BI)** wor
 
 **From:** Tech Manager  
 **To:** UX/UI designer; BI developer; Product Owner; key business users  
-**Subject:** `[Dashboard Project] Dashboard Design (UX + BI) – hold the date`
+**Subject:** `[Predictive Analysis Project] Model Consumption UX / Dashboard Design – hold the date`
 
 Hi all,
 
-We are planning a **Dashboard Design (UX + BI)** workshop for the **Dashboard Project** to define how the dashboards should look, feel, and behave for end-users.
+We are planning a **Model Consumption UX / Dashboard Design (UX + BI)** workshop for the **Predictive Analysis Project** to define how the interfaces that show predictions (dashboards/apps/reports) should look, feel, and behave for end-users.
 
 **Objective:**
 - Align on **user journeys, layout, and visual standards** for the first version of the dashboard.
@@ -61,7 +62,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Confirmed participants  
-**Subject:** `[Dashboard Project] Dashboard Design (UX + BI) – agenda & pre-work`
+**Subject:** `[Predictive Analysis Project] Model Consumption UX / Dashboard Design – agenda & pre-work`
 
 Hi all,
 
@@ -96,7 +97,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Participants  
-**Subject:** `Reminder – Dashboard Project Dashboard Design (UX + BI) today`
+**Subject:** `Reminder – Predictive Analysis Project Model Consumption UX / Dashboard Design today`
 
 Hi all,
 
@@ -120,7 +121,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Participants; Sponsor / other stakeholders as relevant  
-**Subject:** `[Dashboard Project] Dashboard Design (UX + BI) – recap & next steps`
+**Subject:** `[Predictive Analysis Project] Model Consumption UX / Dashboard Design – recap & next steps`
 
 Hi all,
 
@@ -150,15 +151,15 @@ Tech Manager
 
 ---
 
-## 8. What to Check for a “Perfect” Dashboard Design Communication Plan
+## 8. What to Check for a “Perfect” Model Consumption UX Communication Plan
 
 To make this communication stream as strong as possible, ensure that:
 
-- **Users are represented:** Invitations include real or proxy **end-users**, not only managers.
+- **Users are represented:** Invitations include real or proxy **end-users**, not only managers, so we design how predictions are actually consumed.
 - **Pre-work is meaningful:** Participants know which examples to bring and what problems they are trying to solve.
 - **Decisions are visible:** Recap clearly lists UX decisions (layouts, navigation, visual rules) and open items.
 - **Artifacts are accessible:** Wireframes, mockups, and VIS specs are linked in recap emails and easy to find.
-- **Scope is under control:** Communication makes clear what will be delivered in MVP vs. later phases.
+- **Scope is under control:** Communication makes clear what will be delivered in MVP vs. later phases and how this ties into upcoming **QA/UAT** and **benefits tracking**.
 - **Feedback loop exists:** There is explicit space for users to **react to designs** before build is frozen.
 
 If these points are addressed, dashboard design communication will support adoption and reduce rework.

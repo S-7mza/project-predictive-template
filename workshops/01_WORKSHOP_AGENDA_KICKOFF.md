@@ -9,8 +9,8 @@ Attendees: Sponsor, Product Owner, Technical leads, Data owners
 2. Project overview (10 min)
 - Background, business problem, timeline.
 
-3. Objectives & KPIs (20 min)
-- Draft KPIs and key questions the dashboard must answer.
+3. Objectives, KPIs & Predictions (20 min)
+- Draft KPIs and key questions the predictive model should help answer (what to predict, for whom, and why).
 
 4. Stakeholders & users (10 min)
 - Identify primary/secondary users and required access.

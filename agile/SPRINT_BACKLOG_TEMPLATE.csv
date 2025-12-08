@@ -1,3 +1,3 @@
 id,title,description,priority,estimate(owner-days),assignee,status,acceptance_criteria,notes
-US-001,As an executive I want an executive summary dashboard,so I can see high-level KPIs,High,5,PM,open,"Totals match source within 1%","Requires data from finance and sales"
+US-001,As an executive I want an executive summary view of key predictions (e.g., risk or forecast scores),so I can see high-level predictive KPIs,High,5,PM,open,"Totals and model outputs match agreed baselines within 1%","Requires data from finance and sales, model outputs available"
 US-002,As an analyst I want a drilldown by region,so I can investigate anomalies,Medium,8,BI Dev,open,"Filters maintain consistent totals","Depends on canonical region dimension"

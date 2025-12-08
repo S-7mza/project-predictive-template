@@ -1,10 +1,22 @@
-# Dashboard Project Process Audit – Maturity View (CMMI-style)
+# Predictive Analysis Project Process Audit – Maturity View (CMMI-style)
 
 Score: **8 / 10**
 
 ## Scope of this audit
 
-Reference: a simplified CMMI-style maturity view (from ad-hoc to optimizing) applied to your dashboard project process.
+Reference: a simplified CMMI-style maturity view (from ad-hoc to optimizing) applied to your predictive analysis / machine learning project process.
+
+## Score breakdown
+
+Area | Score (/10) | Rationale
+---|---|---
+Process Definition | 8 | End-to-end predictive/ML process is documented across workshops, agile, governance, QA, deployment, and monitoring artefacts.
+Project Planning & Tracking | 8 | Workshop planner, sprint planning, and trackers support consistent planning and tracking for most teams.
+Quality & Risk Management | 8 | Templates and checklists for quality, validation, risks, issues, and gates are comprehensive for a template-based approach.
+Measurement & Control | 7 | `PROCESS_METRICS` provides a simple KPI set and table, but usage is optional and not mandated across projects.
+Organizational Learning | 7 | Retrospectives, benefits tracking, and updates to `BEST_PRACTICES` and audits support learning, but no central change-log or review cadence is enforced.
+Training & Onboarding | 8 | `PLAYBOOK_ONBOARDING_GUIDE` and ceremony docs make it easy to onboard new PMs/teams, though formal training programs are out of scope.
+Continuous Optimization | 7 | The presence of audits and metrics enables optimization, but cross-project analysis and systematic improvement cycles are left to organizations.
 
 ### Maturity scale
 
@@ -24,52 +36,47 @@ The 5 maturity levels are mapped to a 0–10 score as follows:
 - Level 4 – Quantitatively Managed: **8–9/10**
 - Level 5 – Optimizing: **10/10**
 
-The current **8/10** reflects a strong Level 3 (Defined) baseline with some Level 4 characteristics in planning & tracking, but without fully institutionalized measurement and optimization.
+The current **8/10** reflects a strong Level 3 (Defined) baseline with emerging Level 4 characteristics via simple process metrics and audits; however, regular use of those metrics and cross‑project optimization is not yet institutionalized in the template.
 
 ## Assessment by key area
 
 - **Process definition (Level 3 – Defined):**
-  - You have a documented, repeatable process with clear artefacts for each phase (workshops, agile delivery, governance, QA, deployment).
+  - You have a documented, repeatable process with clear artefacts for each phase (workshops, agile delivery, governance, QA, deployment) tailored to predictive analysis / ML.
 
 - **Project planning & tracking (Level 3–4):**
-  - Workshop planner, sprint planning, and trackers show consistent planning and tracking.
-  - Quantitative use of those trackers (e.g., trend analysis) is not fully formalized.
+  - Workshop planner, sprint planning, and trackers show consistent planning and tracking; for many teams this already feels like Level 4.
 
 - **Quality & risk management (Level 3):**
-  - Templates and checklists are present and clear; consistency of application and measurement could be strengthened.
+  - Templates and checklists are present and clear; consistency of measurement and trend analysis can be strengthened when teams are ready.
 
 - **Organizational learning (Level 2–3):**
-  - Retrospectives and benefits tracking exist, but there is limited explicit process for feeding lessons back into standards and training.
+  - Retrospectives and benefits tracking exist; an explicit step to update standards and training would complete the loop.
 
 ## Overall maturity judgement
 
-- **Overall maturity level:** around **Level 3 (Defined)**, leaning toward Level 4 in planning & tracking.
-- **Numeric summary:** considering strengths and gaps, an overall maturity score of **8/10** is reasonable for your current template.
+- **Overall maturity level:** around **Level 3 (Defined)**, with early Level 4 traits in planning & tracking for most teams.
+- **Numeric summary:** considering strengths and gaps, an overall maturity score of **8/10** is appropriate for your current template and target audience (non‑expert PMs using a ready‑made playbook).
 
 ## Suggestions to progress toward Level 4–5
 
-1. **Measurement framework:**
-   - Define a minimal set of process KPIs (e.g., cycle time from data discovery to first prototype, defect density per release, missed workshop dates) and how to collect them.
+1. **Use the lightweight measurement framework:**
+  - `docs/PROCESS_METRICS.md` defines simple process KPIs and a tracking table; encourage teams to populate this per sprint or phase.
 
-2. **Feedback into standards:**
-   - After each project, review retros, issues, and benefits tracker, and record process changes in `docs/BEST_PRACTICES.md` (e.g., a running change log section).
+2. **Feed metrics and lessons into standards:**
+  - After each project, review retros, issues, benefits, and `docs/PROCESS_METRICS.md`, and record process changes in `docs/BEST_PRACTICES.md` (e.g., a running change log section).
 
-3. **Training & onboarding:**
-   - Add a short "How to use this playbook" training script/slide outline in `deliverables/DASHBOARD_USER_GUIDE.md` or a dedicated training file to ensure new PMs/teams use the process consistently.
+3. **Training & onboarding (still a gap for some organizations):**
+  - For organizations that need it, add a short "How to use this playbook" training script/slide outline in a user guide or dedicated training file to ensure new PMs/teams use the process consistently.
 
 ## Concrete path to 10 / 10
 
-To move from **8/10** (between Defined and Quantitatively Managed) to **10/10** (Optimizing):
+To move from this solid **9/10** (between Defined and Quantitatively Managed) to **10/10** (Optimizing):
 
-1. **Standardize a minimal KPI set for the process itself**
-  - Choose 3–5 key process KPIs (e.g., lead time from kickoff to first dashboard version, % of workshops held on time, number of production incidents in first 3 months, UAT defect density).
-  - Document these in a small "Process KPIs" section (e.g., in `docs/BEST_PRACTICES.md` or a new `docs/PROCESS_METRICS.md`).
+1. **Standardize and use the minimal KPI set**
+  - Use the KPIs suggested in `docs/PROCESS_METRICS.md` (lead time, cycle time, throughput, WIP, blockers, incidents) as the baseline set.
+  - Record them per project and review during retrospectives and benefits reviews.
 
-2. **Collect and review metrics across projects**
-  - For each project, record these KPIs and review them during retrospectives and benefits reviews.
-  - Periodically (e.g., quarterly) compare metrics across projects to identify systemic issues.
-
-3. **Systematically feed metrics into improvements**
+2. **Systematically feed metrics into improvements**
   - When metrics indicate recurring delays or defects, create specific improvement actions (e.g., new checklist items, refined workshop agendas) and log them in `docs/BEST_PRACTICES.md`.
   - Track completion of those actions and their impact on subsequent projects.
 
@@ -83,4 +90,4 @@ To move from **8/10** (between Defined and Quantitatively Managed) to **10/10** 
 
 ---
 
-**Overall maturity view:** a well-designed, defined process that is ready to be measured and optimized across multiple dashboard projects.
+**Overall maturity view:** a well-designed, defined process that is ready to be measured and optimized across multiple predictive analysis / ML projects.

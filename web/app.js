@@ -58,16 +58,16 @@ const ganttContainer = document.getElementById("ganttContainer");
 
 // Fallback embedded CSV matching templates/WORKSHOP_DETAILED_SESSION_PLAN.csv
 const embeddedWorkshopCsv = `#,Session,When (relative),Duration,Pre-work lead,Required participants,Dependency,Priority,Deliverables
-1,Kickoff,"Week 0, Day 0","60–90 min","3 days","Sponsor; Product Owner; Tech leads",None,"CRITICAL (High)","Updated docs/PROJECT_BRIEF.md; meeting minutes (templates/MEETING_MINUTES.md); action items in templates/ACTION_LOG.csv; initial templates/RACI.md entries; communication/COMM_01_KICKOFF.md"
-2,Technical Data Discovery (deep),"Week 1, Days 1–5","90–120 min (may repeat per source)","5–7 days","Data Owners; ETL; BI Dev","Kickoff","CRITICAL (High)","Completed deliverables/DATA_INVENTORY.md; sample extracts (CSV/SQL); data dictionaries; data access log; initial data quality notes; communication/COMM_02_DATA_DISCOVERY.md"
-2a,"Security, Privacy & Compliance","Week 0–1 (parallel/early)","60 min","3–5 days","Security/Compliance; Data Owner; BI Lead","Kickoff (or before Data Discovery)","CRITICAL (High if PII)","Data classification register; masking rules; compliance sign-offs; updated docs/DATA_GOVERNANCE.md; communication/COMM_02A_SECURITY_PRIVACY.md"
-3,Data Modeling / Semantic Layer,Week 2,"90–120 min","3–5 days","BI Lead; Data Modeler; ETL; Data Owner","Data Discovery","CRITICAL (High)","Model diagram (PNG/MD); canonical table definitions (documented in deliverables/ARCHITECTURE.md or separate model file); updated deliverables/KPI_SPEC.md mappings; communication/COMM_03_MODELING.md"
-4,ETL / Pipeline Design,Week 3,"90 min","3–5 days","ETL engineers; Data Owner; BI Dev; Ops","Modeling","CRITICAL (High)","ETL design document; pipeline diagrams; schedule definitions; runbook draft (scripts/README.md) and monitoring checks; communication/COMM_04_ETL_DESIGN.md"
-5,"Dashboard Design (UX + BI)","Week 3–4","90 min","3 days","Product Owner; Designer; BI Dev","Modeling; some ETL mock data",High,"Wireframes and mockups; finalized deliverables/KPI_SPEC.md; deliverables/VIS_SPEC.md; mock datasets for prototyping; communication/COMM_05_DASHBOARD_DESIGN.md"
-6,"Performance & QA / Validation",Week 5,"60–90 min","3 days","QA Lead; BI Dev; Data Owner","ETL working; prototype available",High,"QA plan and checklist; validation scripts and test cases; performance benchmark report; UAT acceptance criteria; communication/COMM_06_QA_VALIDATION.md"
-7,Deployment & Monitoring,Week 6,"60 min","3–5 days","DevOps/Ops; BI Lead; Security","QA pass",Medium,"Final runbook and deployment checklist; monitoring and alerting rules; access matrix; security/compliance sign-off; communication/COMM_07_DEPLOYMENT_MONITORING.md"
-8,User Training & Handoff,Week 7,"60–90 min","3 days","Training lead; Product Owner; end-users","Deployed dashboard",Medium,"Training slides and recordings; user guide/quick-start; completed follow_up/FUP_TEMPLATE.md; sign-off document; communication/COMM_08_TRAINING_HANDOFF.md"
-9,Retrospective & Benefits Review,Week 8,"45–60 min","2–3 days","BI Lead; Data Owner; Ops; Product Owner","Post-go-live data",Low,"Retrospective notes; lessons-learned document; prioritized backlog; initial benefits report (docs/BENEFITS_REALIZATION.md update); communication/COMM_09_RETRO_BENEFITS.md"`;
+1,Kickoff,"Week 0","60–90 min","3 days","Sponsor; Product Owner; Data Science Lead; ML Engineers",None,"CRITICAL (High)","Updated docs/PROJECT_BRIEF.md; meeting minutes (templates/MEETING_MINUTES.md); action items in templates/ACTION_LOG.csv; initial templates/RACI.md entries; communication/COMM_01_KICKOFF.md"
+2,Data & Feature Discovery (deep),"Weeks 1–3","90–120 min (may repeat per source)","5–7 days","Data Owners; Data Engineers; Data Scientists; ML Engineers","Kickoff","CRITICAL (High)","Completed deliverables/DATA_INVENTORY.md; feature source catalog; sample datasets; historical data assessment; data quality notes; communication/COMM_02_DATA_DISCOVERY.md"
+2a,"Security, Privacy & Compliance","Weeks 0–1 (parallel/early)","60 min","3–5 days","Security/Compliance; Data Owner; Data Science Lead","Kickoff (or before Data Discovery)","CRITICAL (High if PII)","Data classification register; feature masking rules; compliance sign-offs; model fairness requirements; updated docs/DATA_GOVERNANCE.md; communication/COMM_02A_SECURITY_PRIVACY.md"
+3,Feature Engineering & Data Prep,"Weeks 3–4","90–120 min","3–5 days","Data Science Lead; Data Engineers; ML Engineers; Data Owner","Data Discovery","CRITICAL (High)","Feature engineering pipeline; training/validation/test splits; feature store setup; documented in deliverables/ARCHITECTURE.md and deliverables/MODEL_SPEC.md mappings; communication/COMM_03_MODELING.md"
+4,Model Selection & Training Design,"Weeks 4–5","90 min","3–5 days","Data Scientists; ML Engineers; Data Owner; MLOps","Feature Engineering","CRITICAL (High)","Model selection criteria; training pipeline design; hyperparameter tuning strategy; experiment tracking setup; model registry configuration (scripts/README.md); communication/COMM_04_ETL_DESIGN.md"
+5,"Model Training & Experimentation","Weeks 5–7","90 min","3 days","Product Owner; Data Scientists; ML Engineers","Feature Engineering; some baseline models",High,"Trained baseline and candidate models; model performance reports; finalized deliverables/MODEL_SPEC.md; deliverables/PREDICTION_OUTPUT_SPEC.md; model artifacts in registry; communication/COMM_05_DASHBOARD_DESIGN.md (for model-consumption UX)"
+6,"Model Validation & Performance Testing","Weeks 7–8","60–90 min","3 days","QA Lead; Data Scientists; ML Engineers; Data Owner","Models trained and registered",High,"Model validation plan and test cases; cross-validation and holdout results; bias and fairness analysis; performance benchmark report; A/B testing framework; communication/COMM_06_QA_VALIDATION.md"
+7,Model Deployment & Monitoring,"Weeks 8–9","60 min","3–5 days","MLOps; Data Science Lead; Security","Validation pass",Medium,"Model deployment pipeline; inference endpoints (batch/real-time); monitoring dashboards; drift detection setup; model versioning and rollback procedures; communication/COMM_07_DEPLOYMENT_MONITORING.md"
+8,Stakeholder Demo & Handoff,"Weeks 9–10","60–90 min","3 days","Training lead; Product Owner; end-users; business stakeholders","Deployed model",Medium,"Prediction demo and use case examples; model user guide; confidence score interpretation; completed follow_up/FUP_TEMPLATE.md; sign-off document; communication/COMM_08_TRAINING_HANDOFF.md"
+9,Retrospective & Model Performance Review,"Weeks 10–11","45–60 min","2–3 days","Data Science Lead; Data Owner; MLOps; Product Owner","Post-deployment monitoring data",Low,"Retrospective notes; lessons-learned document; model monitoring backlog; initial performance report (docs/BENEFITS_REALIZATION.md update); retraining triggers; communication/COMM_09_RETRO_BENEFITS.md"`;
 
 function renderTable(filter) {
   tableBody.innerHTML = "";
@@ -297,10 +297,15 @@ if (refreshBtn) {
   });
 }
 
-function parseWeekNumber(when) {
-  const match = /Week\s*(\d+)/i.exec(when || "");
-  if (!match) return null;
-  return Number(match[1]);
+function parseWeekRange(when) {
+  const text = when || "";
+  // Match "Week 3" or "Weeks 3–4" / "Weeks 3-4"
+  const rangeMatch = /Weeks?\s*(\d+)(?:\s*[–-]\s*(\d+))?/i.exec(text);
+  if (!rangeMatch) return null;
+  const start = Number(rangeMatch[1]);
+  const end = rangeMatch[2] ? Number(rangeMatch[2]) : start;
+  if (Number.isNaN(start) || Number.isNaN(end)) return null;
+  return { start, end };
 }
 
 function renderGantt() {
@@ -310,17 +315,27 @@ function renderGantt() {
   if (!workshopData.length) return;
 
   const rows = workshopData.map((row) => {
-    const week = parseWeekNumber(row.when);
-    return { ...row, week };
+    const range = parseWeekRange(row.when);
+    if (!range) {
+      return { ...row, startWeek: null, endWeek: null };
+    }
+    return { ...row, startWeek: range.start, endWeek: range.end };
   });
 
-  const validWeeks = rows.map((r) => r.week).filter((w) => typeof w === "number" && !Number.isNaN(w));
-  const minWeek = validWeeks.length ? Math.min(...validWeeks) : 0;
-  const maxWeek = validWeeks.length ? Math.max(...validWeeks) : 8;
-  const span = Math.max(1, maxWeek - minWeek + 1);
+  const validWeeks = rows
+    .flatMap((r) => [r.startWeek, r.endWeek])
+    .filter((w) => typeof w === "number" && !Number.isNaN(w));
+  // Always show the full project span from Week 0 to Week 11 (12 weeks)
+  const minWeek = 0;
+  const maxWeek = 11;
+  const slots = Math.max(1, maxWeek - minWeek + 1);
 
   rows.forEach((row) => {
-    if (typeof row.week !== "number" || Number.isNaN(row.week)) return;
+    // If we could not parse a week, place the bar at the end of the timeline
+    const startWeek =
+      typeof row.startWeek === "number" && !Number.isNaN(row.startWeek)
+        ? row.startWeek
+        : maxWeek;
 
     const rowEl = document.createElement("div");
     rowEl.className = "gantt-row";
@@ -339,8 +354,10 @@ function renderGantt() {
       bar.classList.add("critical");
     }
 
-    const offset = (row.week - minWeek) / span;
-    const width = 1 / span;
+    const durationWeeks = Math.max(1, (row.endWeek || startWeek) - startWeek + 1);
+    // Each week is an equal slice of the full span; align bars to week cells
+    const offset = (startWeek - minWeek) / slots;
+    const width = durationWeeks / slots;
     bar.style.left = `${offset * 100}%`;
     bar.style.width = `${width * 100}%`;
 
@@ -457,26 +474,26 @@ if (auditSummaryEl && auditPMIEl && auditISOEl && auditAgileEl && auditMaturityE
         <tr>
           <td><a href="#" class="audit-link" data-doc="docs/audit/PROCESS_AUDIT_PMI.md">PMI / PMBOK</a></td>
           <td><strong>8 / 10</strong></td>
-          <td>Strong on scope, schedule, stakeholders, quality.</td>
-          <td>Clarify monitoring, cost management, and change control workflow.</td>
+          <td>Strong on scope, schedule, stakeholders, quality, and gating.</td>
+          <td>Keep cost and change control light but clarify them when needed.</td>
         </tr>
         <tr>
           <td><a href="#" class="audit-link" data-doc="docs/audit/PROCESS_AUDIT_ISO21500.md">ISO 21500 / 21502</a></td>
-          <td><strong>7 / 10</strong></td>
-          <td>Good coverage of lifecycle, governance, and documentation.</td>
-          <td>Make responsibilities, interfaces, and governance cycles more explicit.</td>
+          <td><strong>8 / 10</strong></td>
+          <td>Good structure, governance, and visible principles for predictive projects.</td>
+          <td>Optionally add portfolio linkage and strict ISO-style mapping.</td>
         </tr>
         <tr>
           <td><a href="#" class="audit-link" data-doc="docs/audit/PROCESS_AUDIT_AGILE_SCRUM.md">Agile / Scrum</a></td>
-          <td><strong>8 / 10</strong></td>
-          <td>Clear ceremonies, DoD, and backlog practices.</td>
-          <td>Strengthen product ownership, metrics, and continuous improvement loops.</td>
+          <td><strong>9 / 10</strong></td>
+          <td>Strong Scrum ceremonies, artefacts, DoD, and PO guidance.</td>
+          <td>Add explicit WIP policies and advanced product discovery where useful.</td>
         </tr>
         <tr>
-          <td><a href="#" class="audit-link" data-doc="docs/audit/PROCESS_AUDIT_MATURITY.md">Maturity / CMMI-style</a></td>
+          <td><a href="#" class="audit-link" data-doc="docs/audit/PROCESS_AUDIT_MATURITY.md">ML Maturity / MLOps</a></td>
           <td><strong>8 / 10</strong></td>
-          <td>Standardized process and templates across projects.</td>
-          <td>Increase measurement, automation, and feedback-driven evolution.</td>
+          <td>Standardized ML process and templates across projects.</td>
+          <td>Increase model measurement automation, drift detection, and feedback-driven model evolution.</td>
         </tr>
       </tbody>
     </table>
@@ -486,42 +503,42 @@ if (auditSummaryEl && auditPMIEl && auditISOEl && auditAgileEl && auditMaturityE
   bindDocLinks(auditSummaryEl);
 
   auditPMIEl.innerHTML = `
-    <p><strong>Score:</strong> 8 / 10 (PMI / PMBOK).</p>
-    <p><strong>Barème:</strong> 0–3: ad-hoc, 4–6: partial, 7–8: complete but with some gaps, 9–10: fully integrated and continuously improved.</p>
+    <p><strong>Score:</strong> 8 / 10 (PMI / PMBOK for predictive projects).</p>
+    <p><strong>Barème:</strong> 0–3: ad-hoc, 4–6: most areas partially covered, 7–8: all key areas present with some integration gaps, 9–10: fully integrated and continuously improved.</p>
     <ul>
-      <li><strong>Strengths:</strong> integration & scope artefacts, detailed workshop schedule, strong stakeholder and communication plans, solid QA/UAT coverage.</li>
-      <li><strong>Gaps:</strong> integrated monitoring across knowledge areas, explicit cost management, and a formalized change control workflow.</li>
-      <li><strong>Path to 10/10:</strong> institutionalize a PMI-style status report, define a lightweight change control process, extend project plan with effort/cost tracking, and feed lessons learned back into best practices.</li>
+      <li><strong>Strengths:</strong> strong integration & scope artefacts, a workshop-based schedule, stakeholder and communication plans, QA/UAT coverage, and practical gating and status templates.</li>
+      <li><strong>Gaps:</strong> explicit budget/effort tracking and detailed change-control RACI or thresholds are left to organizations.</li>
+      <li><strong>Path to 10/10:</strong> add a light budget/effort section to the plan, define when to use <code>CHANGE_REQUEST.md</code>, and standardize where status reports are stored.</li>
     </ul>
   `;
 
   auditISOEl.innerHTML = `
-    <p><strong>Score:</strong> 7 / 10 (ISO 21500 / 21502).</p>
-    <p><strong>Barème:</strong> 0–3: fragmented practices, 4–6: basic project guidance, 7–8: coherent model with clear lifecycle, 9–10: fully aligned integrated governance system.</p>
+    <p><strong>Score:</strong> 8 / 10 (ISO 21500 / 21502-style view).</p>
+    <p><strong>Barème:</strong> 0–3: fragmented practices, 4–6: core processes exist, 7–8: processes and roles are clear with some gaps, 9–10: fully aligned governance and improvement system.</p>
     <ul>
-      <li><strong>Strengths:</strong> lifecycle phases mapped to workshops, documented governance artefacts, and clear project context through charters and briefs.</li>
-      <li><strong>Gaps:</strong> responsibilities and interfaces between roles not always explicit, governance cadence not fully described, and benefits realization loop can be strengthened.</li>
-      <li><strong>Path to 10/10:</strong> add a concise RACI for each phase, document standard governance events and inputs/outputs, and link benefits tracking more tightly to decision points.</li>
+      <li><strong>Strengths:</strong> clear context and objectives, defined roles and governance artefacts, planning and resource view, and visible principles and continuous-improvement guidance.</li>
+      <li><strong>Gaps:</strong> explicit mapping to ISO terminology, portfolio/strategy linkage, and a cross-project evidence register.</li>
+      <li><strong>Path to 10/10:</strong> add an optional ISO mapping in <code>BEST_PRACTICES.md</code>, describe portfolio linkage in <code>PROJECT_BRIEF.md</code> or a new note, and keep a simple register of completed artefacts per project.</li>
     </ul>
   `;
 
   auditAgileEl.innerHTML = `
-    <p><strong>Score:</strong> 8 / 10 (Agile / Scrum).</p>
-    <p><strong>Barème:</strong> 0–3: ad-hoc agile, 4–6: partial Scrum, 7–8: consistent Scrum with some scaling gaps, 9–10: mature, metrics-driven agile culture.</p>
+    <p><strong>Score:</strong> 9 / 10 (Agile / Scrum for predictive projects).</p>
+    <p><strong>Barème:</strong> 0–3: ad-hoc agile, 4–6: partial Scrum, 7–8: consistent Scrum with some gaps, 9–10: mature, metrics-driven agile culture.</p>
     <ul>
-      <li><strong>Strengths:</strong> clear ceremonies, backlog templates, Definition of Done, and engineering practices connected to QA and releases.</li>
-      <li><strong>Gaps:</strong> role clarity for Product Owner, explicit link between sprint goals and KPIs, and systematic use of velocity/burndown metrics.</li>
-      <li><strong>Path to 10/10:</strong> formalize PO responsibilities, make sprint goals and KPIs explicit in planning, and use metrics dashboards (velocity, burndown, benefits) as standard inputs to reviews and retrospectives.</li>
+      <li><strong>Strengths:</strong> clear ceremonies, backlog and acceptance templates, strong DoD and DoD cases, <code>PRODUCT_OWNER_GUIDE.md</code>, and optional flow-metrics guidance.</li>
+      <li><strong>Gaps:</strong> explicit WIP limits, advanced product discovery practices, and scaled tech-debt policies are left as optional enhancements.</li>
+      <li><strong>Path to 10/10:</strong> define simple WIP rules, add outcome-based roadmap examples for POs, and reserve some capacity for debt when teams are ready.</li>
     </ul>
   `;
 
   auditMaturityEl.innerHTML = `
-    <p><strong>Score:</strong> 8 / 10 (maturity / CMMI-style view).</p>
-    <p><strong>Barème:</strong> roughly Level 3–4 out of 5 translated to 8/10: processes are defined and largely standardized, with some quantitative management in place.</p>
+    <p><strong>Score:</strong> 8 / 10 (Maturity / CMMI-style view).</p>
+    <p><strong>Barème:</strong> ~Level 3 (Defined) with early Level 4 traits: processes are documented and repeatable, with simple measurement available.</p>
     <ul>
-      <li><strong>Strengths:</strong> repeatable process across projects, rich template library, and clear end-to-end lifecycle for dashboard initiatives.</li>
-      <li><strong>Gaps:</strong> limited quantitative measurement of process performance, partial automation, and improvement loop mostly qualitative.</li>
-      <li><strong>Path to 10/10:</strong> add KPIs for process performance (cycle time, rework, defect rates), automate key checks (data quality, gating), and make periodic process reviews with actions to evolve templates and checklists.</li>
+      <li><strong>Strengths:</strong> defined, reusable process with artefacts for each phase, plus simple process metrics, audits, and an onboarding guide.</li>
+      <li><strong>Gaps:</strong> regular use of process KPIs, cross-project comparisons, and a central change-log are recommended but not enforced.</li>
+      <li><strong>Path to 10/10:</strong> record KPIs per project in <code>PROCESS_METRICS.md</code>, review them in retros and benefits reviews, and periodically update <code>BEST_PRACTICES.md</code> and templates based on trends.</li>
     </ul>
   `;
 }

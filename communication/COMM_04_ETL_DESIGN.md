@@ -6,6 +6,7 @@ This plan describes how to communicate around the **ETL / pipeline design** work
 
 ## 1. Objectives
 
+- Lifecycle role: take agreed **feature/model design** and turn it into implementable **ETL / feature pipelines** that feed both model training and production scoring.
 - Translate the **data model and semantic layer** into concrete **ETL / pipeline designs**.
 - Define **data flows, schedules, orchestration, and error handling**.
 - Align on **ownership**, environments, and **deployment approach** for pipelines.
@@ -38,14 +39,14 @@ This plan describes how to communicate around the **ETL / pipeline design** work
 
 **From:** Tech Manager  
 **To:** ETL/data engineers; BI lead; platform/DevOps  
-**Subject:** `[Dashboard Project] ETL / Pipeline Design – hold the date`
+**Subject:** `[Predictive Analysis Project] ETL / Feature Pipeline Design – hold the date`
 
 Hi all,
 
-We are scheduling an **ETL / Pipeline Design workshop** for the **Dashboard Project** to translate the agreed data model into concrete data flows.
+We are scheduling an **ETL / Feature Pipeline Design workshop** for the **Predictive Analysis / ML Project** to translate the agreed data and feature model into concrete data and feature flows.
 
 **Objective:**
-- Define the **pipelines, schedules, and orchestration** required to support the dashboard with the right SLAs and data quality.
+- Define the **pipelines, schedules, and orchestration** required to support the predictive model (and any consuming UIs/dashboards) with the right SLAs and data quality.
 
 **Proposed slot:** Week X, Day Y – 90–120 minutes  
 **Participants:** ETL/data engineers, BI lead, platform/DevOps, Tech Manager, Security (as needed)
@@ -61,7 +62,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Confirmed participants  
-**Subject:** `[Dashboard Project] ETL / Pipeline Design – agenda & pre-work`
+**Subject:** `[Predictive Analysis Project] ETL / Feature Pipeline Design – agenda & pre-work`
 
 Hi all,
 
@@ -96,7 +97,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Participants  
-**Subject:** `Reminder – Dashboard Project ETL / Pipeline Design today`
+**Subject:** `Reminder – Predictive Analysis Project ETL / Feature Pipeline Design today`
 
 Hi all,
 
@@ -120,7 +121,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Participants; relevant managers  
-**Subject:** `[Dashboard Project] ETL / Pipeline Design – recap & next steps`
+**Subject:** `[Predictive Analysis Project] ETL / Feature Pipeline Design – recap & next steps`
 
 Hi all,
 
@@ -159,6 +160,6 @@ To ensure ETL-related communication is strong and reliable, check that:
 - **Risks are visible:** Operational and technical risks (e.g., long-running jobs, sensitive data) are captured and tracked.
 - **Artifacts are linked:** Emails reference `deliverables/ARCHITECTURE.md`, `docs/DEPLOYMENT_RUNBOOK.md`, and `docs/CONFIGURATION_MANAGEMENT.md` where relevant.
 - **Non-functional requirements are not implicit:** SLAs, monitoring, and alerting are written down and communicated, not assumed.
-- **Alignment with roadmap:** The ETL plan fits within the **overall project plan** and **release roadmap**.
+- **Alignment with lifecycle and roadmap:** The ETL/feature pipeline plan fits within the **overall ML lifecycle** (feeds Model Training/Experimentation and Monitoring) and the **release roadmap**.
 
 If these items are satisfied, stakeholders can trust that ETL communication is complete and actionable.

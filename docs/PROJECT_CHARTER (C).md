@@ -6,56 +6,63 @@ Start Date: [START_DATE]
 Target Delivery Date: [TARGET_DATE]
 
 1. Purpose and Background
-- Brief background: why the dashboard is initiated, business context.
-- Purpose: what decisions the dashboard will enable and primary users.
+- Brief background: why the predictive model is initiated, business context, forecasting or prediction needs.
+- Purpose: what decisions the model will enable, automated predictions to provide, and primary users.
 
 2. Objectives / Success Criteria
-- Objective 1: e.g., Provide executive-level view of X by Y date.
-- Objective 2: Reduce manual reporting time by Z%.
-- Success criteria: List measurable acceptance criteria (accuracy, freshness, performance thresholds).
+- Objective 1: e.g., Deliver predictive model with X% accuracy for forecasting Y by Z date.
+- Objective 2: Enable automated predictions reducing manual analysis time by Z%.
+- Success criteria: List measurable acceptance criteria (model accuracy, precision, recall, F1-score, RMSE, MAE, inference latency, explainability thresholds).
 
 3. Scope
-- In-scope: KPIs, data sources, views, initial user groups.
-- Out-of-scope: items not included in this release (deep exploratory analytics, ad-hoc ETL for legacy reports).
+- In-scope: target variables, feature sources, model types (regression, classification, time series), training data, deployment infrastructure, prediction frequency.
+- Out-of-scope: items not included in this release (advanced ensemble methods, real-time streaming inference, exploratory what-if scenarios).
 
 4. Deliverables
-- `deliverables/KPI_SPEC.md` completed for all agreed KPIs.
-- `deliverables/DATA_INVENTORY.md` completed.
-- Dashboard views (list) with wireframes and signed-off visuals.
-- Deployment runbook and training materials.
+- `deliverables/MODEL_SPEC.md` completed for all agreed models and target variables.
+- `deliverables/DATA_INVENTORY.md` completed with feature sources.
+- Trained and validated models with performance reports.
+- Model deployment pipeline and inference endpoints.
+- Model documentation, monitoring views or dashboards (for model performance and data drift), and user guides for consuming and interpreting predictions.
 
 5. Milestones (high-level)
 - Kickoff: [date]
-- Complete Data Discovery: [date]
-- Model & ETL designs agreed: [date]
-- Dashboard initial prototype: [date]
-- UAT complete: [date]
-- Deployment & Handoff: [date]
+- Complete Data & Feature Discovery: [date]
+- Feature engineering and data prep completed: [date]
+- Model training and selection: [date]
+- Model validation and performance testing complete: [date]
+- Model deployment & monitoring setup: [date]
 
 6. Budget & Resources
 - Estimated budget: [amount]
-- Core team: PM, BI lead, BI devs, data engineer, QA, ops
+- Core team: PM, Data Science Lead, Data Scientists, ML Engineers, Data Engineers, MLOps, QA
+- Compute resources: Training infrastructure, model registry, serving infrastructure
 - External vendors: [if any]
 
 7. Roles & Responsibilities
-- Sponsor: Approve scope and budget.
+- Sponsor: Approve scope, budget, and model performance criteria.
 - PM: Manage schedule, risks, and communications.
-- BI Lead: Technical ownership of visual and KPI definitions.
-- Data Engineer: Data sourcing and ETL responsibilities.
-- Product Owner: Prioritize requirements and accept UAT.
+- Data Science Lead: Technical ownership of model design, feature selection, and performance targets.
+- ML Engineers: Model training pipeline, hyperparameter tuning, model deployment.
+- Data Engineers: Feature engineering, data pipelines, and feature store.
+- MLOps: Model versioning, deployment automation, monitoring, and retraining workflows.
+- Product Owner: Prioritize prediction requirements and accept validation results.
 
 8. Constraints & Assumptions
-- Data access will be provided within X days of kickoff.
-- Sensitive data restrictions apply; masking may be required.
-- Tooling and infra will support required concurrency and retention.
+- Historical data will be provided within X days of kickoff.
+- Sensitive features require masking or anonymization.
+- Model must meet explainability requirements for regulatory compliance.
+- Infrastructure will support required training compute and inference load.
 
 9. Major Risks & Mitigation
-- Risk: Key data owner unavailable — Mitigation: identify alternate contact & escalate to sponsor.
-- Risk: Data quality issues — Mitigation: early profiling and agreed quality thresholds.
+- Risk: Insufficient historical data quality — Mitigation: early data profiling, agreed quality thresholds, data cleaning sprint.
+- Risk: Model performance below target — Mitigation: multiple model experiments, ensemble methods, feature engineering iterations.
+- Risk: Model drift in production — Mitigation: monitoring dashboards, automated retraining triggers, A/B testing framework.
+- Risk: Model drift in production — Mitigation: monitoring views/dashboards and alerts, automated retraining triggers, A/B testing framework.
 
 10. Approval
 - Sponsor: [name / signature / date]
 - PM: [name / signature / date]
 
 Notes
-- Attach `docs/PROJECT_BRIEF.md`, `deliverables/DATA_INVENTORY.md`, `deliverables/KPI_SPEC.md` and `templates/RACI.md` for reference.
+- Attach `docs/PROJECT_BRIEF.md`, `deliverables/DATA_INVENTORY.md`, `deliverables/MODEL_SPEC.md` and `templates/RACI.md` for reference.

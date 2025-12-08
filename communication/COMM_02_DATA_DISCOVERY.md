@@ -38,11 +38,11 @@ This plan ensures that everyone involved in data discovery knows **why** the ses
 
 **From:** Tech Manager  
 **To:** Data owners; ETL / data engineers; BI developers; PO  
-**Subject:** `[Dashboard Project] Technical Data Discovery – hold the date`
+**Subject:** `[Predictive Analysis Project] Technical Data & Feature Discovery – hold the date`
 
 Hi all,
 
-As part of the **Dashboard Project**, we are organizing a **Technical Data Discovery workshop** to identify and qualify the data sources needed for the solution.
+As part of the **Predictive Analysis / ML Project**, we are organizing a **Technical Data & Feature Discovery workshop** to identify and qualify the data sources and candidate features needed for the solution.
 
 **Objective:**
 - Confirm which **systems, tables, views, and APIs** are in scope.
@@ -62,7 +62,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Confirmed participants  
-**Subject:** `[Dashboard Project] Technical Data Discovery – agenda & pre-work`
+**Subject:** `[Predictive Analysis Project] Technical Data & Feature Discovery – agenda & pre-work`
 
 Hi all,
 
@@ -96,7 +96,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Participants  
-**Subject:** `Reminder – Dashboard Project Technical Data Discovery today`
+**Subject:** `Reminder – Predictive Analysis Project Technical Data & Feature Discovery today`
 
 Hi all,
 
@@ -120,7 +120,7 @@ Tech Manager
 
 **From:** Tech Manager  
 **To:** Participants; key tech stakeholders; PO (cc Sponsor as needed)  
-**Subject:** `[Dashboard Project] Technical Data Discovery – recap & next steps`
+**Subject:** `[Predictive Analysis Project] Technical Data & Feature Discovery – recap & next steps`
 
 Hi all,
 

@@ -1,7 +1,8 @@
 # Communication Plan – Workshop 8: User Training & Handoff
 
 ## 1. Objectives
-- Inform end-users about the new dashboard and training opportunities.
+- Lifecycle role: ensure users can correctly **interpret and act on predictions** and that ownership transitions from project to BAU support.
+- Inform end-users about the new predictive model, how to interpret its outputs (in dashboards/apps/reports), and training opportunities.
 - Ensure that key users, trainers, and support understand their roles.
 - Drive adoption by clearly communicating benefits and how to get help.
 - Formalize handoff from project team to business-as-usual (BAU) support.
@@ -23,11 +24,11 @@
 
 **From:** Training Lead / Product Owner  
 **To:** Target end-user groups; key users  
-**Subject:** `[Dashboard Project] New dashboard training – registration open`
+**Subject:** `[Predictive Analysis Project] New model & prediction training – registration open`
 
 Hi all,
 
-We are pleased to invite you to **User Training sessions** for the new **Dashboard Project**. These sessions will help you understand the available views, KPIs, and how to use the dashboard in your daily work.
+We are pleased to invite you to **User Training sessions** for the new **Predictive Analysis / ML Project**. These sessions will help you understand the available predictions, KPIs, and how to use model outputs (in dashboards/apps/reports) in your daily work.
 
 **Training windows:** Week 7 – several 60–90 minute slots  
 **Formats:** Live virtual sessions + recorded demo / Q&A  
@@ -43,11 +44,11 @@ Training Lead
 
 **From:** Training Lead  
 **To:** Registered participants  
-**Subject:** `[Dashboard Project] Training & Handoff – agenda & preparation`
+**Subject:** `[Predictive Analysis Project] Training & Handoff – agenda & preparation`
 
 Hi all,
 
-Thank you for registering for the **Dashboard Training & Handoff** session. Below are the details:
+Thank you for registering for the **Predictive Model Training & Handoff** session. Below are the details:
 
 **When:** Week 7 – 60–90 min  
 **Where:** &lt;meeting room or virtual link&gt;  
@@ -56,14 +57,14 @@ Thank you for registering for the **Dashboard Training & Handoff** session. Belo
 **Agenda (draft)**
 1. Welcome and objectives.  
 2. Overview of business KPIs and use cases.  
-3. Live walkthrough of the dashboard (navigation, filters, exports).  
-4. Hands-on exercises using sample questions.  
-5. Where to find user guides (`deliverables/DASHBOARD_USER_GUIDE.md`) and FAQ.  
+3. Live walkthrough of where and how to see predictions (dashboards, apps, reports) and how to interpret them (scores, thresholds, labels).  
+4. Hands-on exercises using sample questions and predictions.  
+5. Where to find user guides (`deliverables/MODEL_USER_GUIDE.md`) and FAQ.  
 6. Support & escalation paths after go-live.
 
 **Pre-work**
-- Make sure you can log into the environment where the dashboard is hosted.  
-- Think of 1–2 typical questions you want the dashboard to answer.
+- Make sure you can log into the environment where you will see model outputs (dashboards, apps, or reports).  
+- Think of 1–2 typical questions you want the predictions to help you answer.
 
 Best regards,  
 Training Lead
@@ -73,11 +74,11 @@ Training Lead
 
 **From:** Training Lead  
 **To:** Participants  
-**Subject:** `Reminder – Dashboard Training & Handoff session today`
+**Subject:** `Reminder – Predictive Model Training & Handoff session today`
 
 Hi all,
 
-A quick reminder that our **Dashboard Training & Handoff** session is today:
+A quick reminder that our **Predictive Model Training & Handoff** session is today:
 
 **Time:** &lt;time&gt;  
 **Where:** &lt;meeting room / link&gt;
@@ -92,20 +93,20 @@ Training Lead
 
 **From:** Training Lead / Product Owner  
 **To:** Participants; interested stakeholders  
-**Subject:** `[Dashboard Project] Training materials & how to get help`
+**Subject:** `[Predictive Analysis Project] Training materials & how to get help`
 
 Hi all,
 
-Thank you for attending the **Dashboard Training & Handoff** session.
+Thank you for attending the **Predictive Model Training & Handoff** session.
 
 You can find the materials here:
-- User guide: `deliverables/DASHBOARD_USER_GUIDE.md`  
+- User guide: `deliverables/MODEL_USER_GUIDE.md`  
 - Quick-start instructions: &lt;link or section&gt;  
 - Recording of the session: &lt;link&gt;
 
 If you have questions or issues:
 - For functional questions: contact &lt;Product Owner / key users&gt;.  
-- For technical issues / incidents: contact &lt;Support / Helpdesk&gt; with the subject `[Dashboard Project]`.
+- For technical issues / incidents: contact &lt;Support / Helpdesk&gt; with the subject `[Predictive Analysis Project]`.
 
 Best regards,  
 Training Lead / Product Owner
@@ -114,6 +115,6 @@ Training Lead / Product Owner
 ## 8. Adoption Check-In & Feedback (T+5)
 
 Send a brief survey or email to participants and key stakeholders to assess:
-- How often they are using the dashboard.  
-- Whether it supports their key decisions.  
+- How often they are using the model outputs (dashboards, apps, reports).  
+- Whether predictions support their key decisions.  
 - Any suggested improvements, which can then be fed into the backlog.

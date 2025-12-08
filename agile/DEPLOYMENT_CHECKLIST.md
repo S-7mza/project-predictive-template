@@ -22,4 +22,4 @@ Post-deployment
 Sign-off
 - Deployed by: [Name/date]
 - Approved by: [PO/Sponsor]
-- Links to artifacts: [UAT results, monitoring dashboards].
+- Links to artifacts: [UAT results, model monitoring views/dashboards].

@@ -1,4 +1,4 @@
-Business Model Canvas — Dashboard Project (example)
+Business Model Canvas — Predictive Analysis / ML Project (example)
 
 Project: [PROJECT_NAME]
 Date: [DATE]
@@ -13,22 +13,22 @@ Date: [DATE]
 2. Key Activities
 - Data discovery and ingestion
 - Data modeling and transformation
-- Visual design and dashboard development
-- QA, validation and performance tuning
-- Deployment, monitoring and user training
+- Feature engineering and model development
+- QA, validation and performance tuning for models and data pipelines
+- Deployment, monitoring and user training on interpreting predictions
 
 3. Key Resources
 - Data platform (warehouse, compute)
 - ETL and orchestration tools (Airflow, dbt, etc.)
-- BI tool (Power BI/Tableau/Looker/Superset)
+- Model development and experimentation environment (e.g., notebooks, ML frameworks)
 - SMEs for KPIs and business rules
 - Project manager, BI developers, data engineers
 
 4. Value Propositions
-- Single source of truth for key business KPIs
-- Faster decision-making through near-real-time insights
-- Reduced manual reporting and reconciliations
-- Improved transparency and tracking of targets
+- Better decisions and outcomes through accurate, timely predictions
+- Faster decision-making through near-real-time predictive insights
+- Reduced manual analysis and ad-hoc decision-making effort
+- Improved transparency and tracking of both predictive and business KPIs
 
 5. Customer Relationships
 - Regular stakeholder check-ins and demos
@@ -36,7 +36,7 @@ Date: [DATE]
 - Support and on-call for production issues
 
 6. Channels
-- BI portal/dashboard platform
+- Applications, APIs, and BI/dashboards that consume model outputs
 - Email reports and scheduled exports
 - Training sessions and recorded walkthroughs
 - Embedded links in business apps or SharePoint
@@ -45,7 +45,7 @@ Date: [DATE]
 - Executives (high-level overview)
 - Managers (operational views)
 - Analysts (detailed exploration)
-- Data/IT teams (operational dashboards)
+- Data/IT teams (operational monitoring and model operations)
 
 8. Cost Structure
 - Infrastructure costs (compute, storage)
